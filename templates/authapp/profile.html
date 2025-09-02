@@ -2,20 +2,59 @@
 
 {% block title %}Profile - E-commerce{% endblock %}
 
+{% block extra_css %}
+{% load static %}
+<style>
+    /* Match black & white compact theme */
+    body { background: linear-gradient(135deg, #ffffff 0%, #f3f3f3 100%); }
+
+    .form-label { color: #111111; font-size: 0.92rem; margin-bottom: 4px; letter-spacing: .2px; }
+    .form-control {
+        background-color: #ffffff;
+        border-color: #d9d9d9;
+        color: #111111;
+        padding: 8px 12px;
+        height: 36px;
+        border-radius: 8px;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+    .form-control:hover { border-color: #bdbdbd; background-color: #fcfcfc; }
+    .form-control:focus { border-color: #0f0f0f; box-shadow: 0 6px 18px rgba(0,0,0,0.08), 0 0 0 3px rgba(0,0,0,0.06); }
+    .form-control::placeholder { color: #9a9a9a; }
+
+    .btn-primary { background: #111111 !important; border: 1px solid #111111 !important; border-radius: 8px; }
+    .btn-primary:hover { background: #1a1a1a !important; border-color: #1a1a1a !important; box-shadow: 0 8px 22px rgba(0,0,0,0.16); transform: translateY(-1px); }
+    .btn-outline-secondary { color: #111111; border-color: #cfcfcf; }
+    .btn-outline-secondary:hover { background-color: #f2f2f2; border-color: #bdbdbd; color: #111111; }
+
+    .card { border: 1px solid #ececec; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.05); }
+    .card-header { background: #ffffff !important; color: #111111; border-bottom: 1px solid #efefef; }
+    .card-body { padding: 16px; }
+
+    .row.g-compact { --bs-gutter-x: 0.75rem; --bs-gutter-y: 0.75rem; }
+
+    @media (max-width: 576px) {
+        .card-body { padding: 12px; }
+        .form-control { height: 34px; padding: 6px 10px; font-size: 0.95rem; }
+        .form-label { font-size: 0.9rem; }
+        .d-flex.gap-2 { gap: .5rem !important; }
+        .d-flex.gap-2 .btn { width: 100%; }
+    }
+</style>
+{% endblock %}
+
 {% block content %}
-<div class="row">
-    <div class="col-md-8">
+<div class="row g-compact">
+    <div class="col-lg-8 col-12">
         <div class="card">
-            <div class="card-header bg-primary text-white">
-                <h4 class="mb-0">
-                    <i class="fas fa-user-edit me-2"></i>Edit Profile
-                </h4>
+            <div class="card-header">
+                <h5 class="mb-0 fw-semibold"><i class="fas fa-user-edit me-2"></i>Edit Profile</h5>
             </div>
             <div class="card-body">
                 <form method="post" novalidate>
                     {% csrf_token %}
                     
-                    <div class="row">
+                    <div class="row g-compact">
                         <div class="col-md-6 mb-3">
                             <label for="{{ form.first_name.id_for_label }}" class="form-label fw-semibold">
                                 <i class="fas fa-user me-2"></i>First Name *
@@ -73,7 +112,7 @@
                         {% endif %}
                     </div>
                     
-                    <div class="row">
+                    <div class="row g-compact">
                         <div class="col-md-6 mb-3">
                             <label for="{{ form.city.id_for_label }}" class="form-label fw-semibold">
                                 <i class="fas fa-city me-2"></i>City *
@@ -103,7 +142,7 @@
                         </div>
                     </div>
                     
-                    <div class="row">
+                    <div class="row g-compact">
                         <div class="col-md-6 mb-3">
                             <label for="{{ form.postal_code.id_for_label }}" class="form-label fw-semibold">
                                 <i class="fas fa-mail-bulk me-2"></i>Postal Code *
@@ -148,10 +187,10 @@
                     </div>
                     
                     <div class="d-flex gap-2">
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary btn-sm py-2 px-3">
                             <i class="fas fa-save me-2"></i>Save Changes
                         </button>
-                        <a href="{% url 'authapp:home' %}" class="btn btn-outline-secondary">
+                        <a href="{% url 'authapp:home' %}" class="btn btn-outline-secondary btn-sm py-2 px-3">
                             <i class="fas fa-times me-2"></i>Cancel
                         </a>
                     </div>
@@ -160,12 +199,12 @@
         </div>
     </div>
     
-    <div class="col-md-4">
+    <div class="col-lg-4 col-12 mt-3 mt-lg-0">
         <div class="card mb-4">
-            <div class="card-header bg-info text-white">
-                <h5 class="mb-0">
+            <div class="card-header">
+                <h6 class="mb-0 fw-semibold">
                     <i class="fas fa-info-circle me-2"></i>Profile Information
-                </h5>
+                </h6>
             </div>
             <div class="card-body">
                 <div class="d-flex align-items-center mb-3">
@@ -205,10 +244,10 @@
         </div>
         
         <div class="card">
-            <div class="card-header bg-warning text-dark">
-                <h5 class="mb-0">
+            <div class="card-header">
+                <h6 class="mb-0 fw-semibold">
                     <i class="fas fa-shield-alt me-2"></i>Security
-                </h5>
+                </h6>
             </div>
             <div class="card-body">
                 <div class="d-grid gap-2">
@@ -260,6 +299,65 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 2000);
         });
     });
+    // Debounced autocomplete for City and State (India)
+    const DEBOUNCE_MS = 300;
+    let locationsCache = null;
+    let debounceTimers = {};
+
+    function loadLocations() {
+        if (locationsCache) return Promise.resolve(locationsCache);
+        return fetch('{% static "authapp/india_locations.json" %}')
+            .then(r => r.json())
+            .then(data => { locationsCache = data; return data; })
+            .catch(() => ({ states: [], cities: [] }));
+    }
+
+    function setupAutocomplete(inputEl, type) {
+        if (!inputEl) return;
+        inputEl.setAttribute('autocomplete', 'off');
+        inputEl.setAttribute('role', 'combobox');
+        inputEl.setAttribute('aria-autocomplete', 'list');
+
+        const list = document.createElement('div');
+        list.className = 'list-group position-absolute w-100 shadow-sm';
+        list.style.zIndex = 1050;
+        list.style.maxHeight = '180px';
+        list.style.overflowY = 'auto';
+        list.style.display = 'none';
+        inputEl.parentElement.style.position = 'relative';
+        inputEl.parentElement.appendChild(list);
+
+        function hideList() { list.style.display = 'none'; list.innerHTML = ''; }
+        function showList(items) {
+            list.innerHTML = '';
+            items.forEach(text => {
+                const a = document.createElement('button');
+                a.type = 'button';
+                a.className = 'list-group-item list-group-item-action py-2';
+                a.textContent = text;
+                a.addEventListener('click', () => { inputEl.value = text; hideList(); });
+                list.appendChild(a);
+            });
+            list.style.display = items.length ? 'block' : 'none';
+        }
+
+        inputEl.addEventListener('input', () => {
+            clearTimeout(debounceTimers[type]);
+            debounceTimers[type] = setTimeout(async () => {
+                const q = inputEl.value.trim().toLowerCase();
+                if (q.length < 2) { hideList(); return; }
+                const data = await loadLocations();
+                const source = type === 'state' ? data.states : data.cities;
+                const matches = source.filter(x => x.toLowerCase().includes(q)).slice(0, 10);
+                showList(matches);
+            }, DEBOUNCE_MS);
+        });
+
+        inputEl.addEventListener('blur', () => setTimeout(hideList, 150));
+    }
+
+    setupAutocomplete(document.getElementById('{{ form.city.id_for_label }}'), 'city');
+    setupAutocomplete(document.getElementById('{{ form.state.id_for_label }}'), 'state');
 });
 </script>
 {% endblock %}

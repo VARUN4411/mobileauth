@@ -9,6 +9,17 @@ import secrets
 import string
 
 
+def generate_unique_username(base_username: str, model_cls):
+    """Generate a username unique for model_cls by suffixing a counter if needed."""
+    base_username = base_username.strip().lower()
+    candidate = base_username
+    counter = 1
+    while model_cls.objects.filter(username=candidate).exists():
+        counter += 1
+        candidate = f"{base_username}_{counter}"
+    return candidate
+
+
 class UserManager(BaseUserManager):
     def create_user(self, mobile=None, email=None, password=None, **extra_fields):
         if not mobile and not email:
@@ -17,10 +28,12 @@ class UserManager(BaseUserManager):
         username = extra_fields.get('username')
         if not username:
             if mobile:
-                username = f"user_{mobile.replace('+','')}"
+                base_username = f"user_{mobile.replace('+','').replace('-', '')}"
             elif email:
-                username = f"user_{email.split('@')[0]}"
-            extra_fields['username'] = username
+                base_username = f"user_{email.split('@')[0]}"
+            else:
+                base_username = "user"
+            extra_fields['username'] = generate_unique_username(base_username, self.model)
 
         # Generate password if not provided
         if not password:
@@ -76,12 +89,15 @@ class User(AbstractUser):
             raise ValidationError('Either mobile number or email must be provided.')
     
     def save(self, *args, **kwargs):
-        # Generate username if not provided
+        # Generate username if not provided (ensure uniqueness)
         if not self.username:
             if self.mobile:
-                self.username = f"user_{self.mobile.replace('+', '').replace('-', '')}"
+                base_username = f"user_{self.mobile.replace('+', '').replace('-', '')}"
             elif self.email:
-                self.username = f"user_{self.email.split('@')[0]}"
+                base_username = f"user_{self.email.split('@')[0]}"
+            else:
+                base_username = "user"
+            self.username = generate_unique_username(base_username, type(self))
         
         self.clean()
         super().save(*args, **kwargs)

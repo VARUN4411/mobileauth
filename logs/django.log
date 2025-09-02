@@ -1138,3 +1138,285 @@ WARNING 2025-09-02 11:37:37,048 log 8768 18236 Not Found: /favicon.ico
 INFO 2025-09-02 11:37:37,049 basehttp 8768 18236 - Broken pipe from ('127.0.0.1', 35701)
 INFO 2025-09-02 11:37:47,741 basehttp 8768 2196 "GET /auth/ HTTP/1.1" 302 0
 INFO 2025-09-02 11:37:47,789 basehttp 8768 2196 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5285
+INFO 2025-09-02 11:56:40,293 autoreload 3080 2672 Watching for file changes with StatReloader
+WARNING 2025-09-02 11:56:43,062 log 3080 15880 Not Found: /
+WARNING 2025-09-02 11:56:43,063 basehttp 3080 15880 "GET / HTTP/1.1" 404 2480
+WARNING 2025-09-02 11:56:43,169 log 3080 15880 Not Found: /favicon.ico
+INFO 2025-09-02 11:56:43,170 basehttp 3080 15880 - Broken pipe from ('127.0.0.1', 52194)
+INFO 2025-09-02 11:56:50,908 basehttp 3080 6608 "GET /auth/ HTTP/1.1" 302 0
+INFO 2025-09-02 11:56:50,947 basehttp 3080 6608 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5285
+INFO 2025-09-02 11:58:54,833 basehttp 3080 11496 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5273
+WARNING 2025-09-02 11:58:54,911 log 3080 11496 Not Found: /favicon.ico
+INFO 2025-09-02 11:58:54,914 basehttp 3080 11496 - Broken pipe from ('127.0.0.1', 54186)
+INFO 2025-09-02 11:59:38,065 basehttp 3080 10756 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5211
+INFO 2025-09-02 12:00:48,180 autoreload 3080 2672 D:\demo\auth_project\authapp\forms.py changed, reloading.
+INFO 2025-09-02 12:00:48,929 autoreload 18760 17736 Watching for file changes with StatReloader
+INFO 2025-09-02 12:00:58,641 autoreload 18760 17736 D:\demo\auth_project\authapp\forms.py changed, reloading.
+INFO 2025-09-02 12:00:59,282 autoreload 1928 6612 Watching for file changes with StatReloader
+INFO 2025-09-02 12:01:08,990 autoreload 1928 6612 D:\demo\auth_project\authapp\forms.py changed, reloading.
+INFO 2025-09-02 12:01:09,592 autoreload 12276 7612 Watching for file changes with StatReloader
+INFO 2025-09-02 12:01:26,483 autoreload 12276 7612 D:\demo\auth_project\authapp\forms.py changed, reloading.
+INFO 2025-09-02 12:01:27,142 autoreload 9692 3808 Watching for file changes with StatReloader
+INFO 2025-09-02 12:01:30,730 basehttp 9692 10068 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5211
+WARNING 2025-09-02 12:01:30,770 log 9692 10068 Not Found: /favicon.ico
+INFO 2025-09-02 12:01:30,771 basehttp 9692 10068 - Broken pipe from ('127.0.0.1', 56700)
+INFO 2025-09-02 12:01:48,827 basehttp 9692 6136 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5285
+WARNING 2025-09-02 12:01:48,890 log 9692 6136 Not Found: /favicon.ico
+INFO 2025-09-02 12:01:48,892 basehttp 9692 6136 - Broken pipe from ('127.0.0.1', 56967)
+INFO 2025-09-02 12:01:55,925 basehttp 9692 4316 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 5619
+INFO 2025-09-02 12:02:56,297 utils 9692 4316 Email OTP sent to varunmane9032@gmail.com
+INFO 2025-09-02 12:02:56,322 basehttp 9692 4316 "POST /auth/login/?next=/auth/ HTTP/1.1" 302 0
+INFO 2025-09-02 12:02:56,358 utils 9692 4316 Cleaned up 3 expired OTPs
+INFO 2025-09-02 12:02:56,374 basehttp 9692 4316 "GET /auth/otp-verification/ HTTP/1.1" 200 9103
+INFO 2025-09-02 12:04:29,325 basehttp 9692 4316 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 5589
+INFO 2025-09-02 12:04:44,118 basehttp 9692 4316 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 5541
+INFO 2025-09-02 12:04:58,123 basehttp 9692 4316 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 5483
+WARNING 2025-09-02 12:04:58,178 log 9692 4316 Not Found: /favicon.ico
+INFO 2025-09-02 12:04:58,180 basehttp 9692 4316 - Broken pipe from ('127.0.0.1', 57067)
+INFO 2025-09-02 12:07:38,960 basehttp 9692 7244 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 5483
+INFO 2025-09-02 12:31:31,837 basehttp 9692 19508 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 6756
+INFO 2025-09-02 12:36:07,738 basehttp 9692 9428 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 6779
+WARNING 2025-09-02 12:36:08,420 log 9692 9428 Not Found: /favicon.ico
+WARNING 2025-09-02 12:36:08,421 basehttp 9692 9428 "GET /favicon.ico HTTP/1.1" 404 2531
+INFO 2025-09-02 12:37:25,508 basehttp 9692 9428 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 7545
+WARNING 2025-09-02 12:37:25,570 log 9692 9428 Not Found: /favicon.ico
+INFO 2025-09-02 12:37:25,574 basehttp 9692 9428 - Broken pipe from ('127.0.0.1', 22484)
+INFO 2025-09-02 12:38:55,100 basehttp 9692 2172 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 7545
+INFO 2025-09-02 12:40:13,485 basehttp 9692 2172 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 7545
+INFO 2025-09-02 12:45:35,599 basehttp 9692 7256 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 7545
+INFO 2025-09-02 12:47:15,750 basehttp 9692 7256 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 7545
+INFO 2025-09-02 12:47:30,616 basehttp 9692 7256 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 7545
+ERROR 2025-09-02 12:50:15,620 log 9692 6344 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 88, in login_view
+    return render(request, 'authapp/login.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\demo\myenv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\demo\myenv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' appears more than once
+ERROR 2025-09-02 12:50:15,634 basehttp 9692 6344 "POST /auth/login/?next=/auth/ HTTP/1.1" 500 169957
+INFO 2025-09-02 12:52:24,077 basehttp 9692 18628 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 7865
+INFO 2025-09-02 12:52:27,348 basehttp 9692 18628 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 7865
+INFO 2025-09-02 12:52:28,930 basehttp 9692 18628 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 7865
+INFO 2025-09-02 12:54:14,427 basehttp 9692 18628 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 7957
+INFO 2025-09-02 12:54:26,746 basehttp 9692 18628 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 7960
+INFO 2025-09-02 12:56:19,313 basehttp 9692 18628 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 8474
+INFO 2025-09-02 12:56:43,659 basehttp 9692 18628 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 8468
+INFO 2025-09-02 12:57:31,835 basehttp 9692 18628 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 8484
+INFO 2025-09-02 12:58:55,002 basehttp 9692 18628 "POST /auth/login/?next=/auth/ HTTP/1.1" 200 8398
+WARNING 2025-09-02 12:58:55,077 log 9692 18628 Not Found: /favicon.ico
+INFO 2025-09-02 12:58:55,080 basehttp 9692 18628 - Broken pipe from ('127.0.0.1', 36427)
+INFO 2025-09-02 13:05:11,048 autoreload 20012 7148 Watching for file changes with StatReloader
+WARNING 2025-09-02 13:05:14,316 log 20012 16328 Not Found: /
+WARNING 2025-09-02 13:05:14,318 basehttp 20012 16328 "GET / HTTP/1.1" 404 2480
+WARNING 2025-09-02 13:05:14,418 log 20012 16328 Not Found: /favicon.ico
+INFO 2025-09-02 13:05:14,420 basehttp 20012 16328 - Broken pipe from ('127.0.0.1', 47099)
+INFO 2025-09-02 13:05:21,098 basehttp 20012 9744 "GET /auth/ HTTP/1.1" 302 0
+INFO 2025-09-02 13:05:21,161 basehttp 20012 9744 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 8066
+WARNING 2025-09-02 13:05:21,276 log 20012 9744 Not Found: /favicon.ico
+INFO 2025-09-02 13:05:21,278 basehttp 20012 9744 - Broken pipe from ('127.0.0.1', 47167)
+ERROR 2025-09-02 13:05:39,625 log 20012 5824 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\auth_project\authapp\views.py", line 39, in login_view
+    user = User.objects.get(mobile=identifier)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+authapp.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: authapp_user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\demo\auth_project\authapp\views.py", line 65, in login_view
+    user = User.objects.create_user(
+  File "D:\demo\auth_project\authapp\models.py", line 32, in create_user
+    user.save(using=self._db)
+  File "D:\demo\auth_project\authapp\models.py", line 87, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\contrib\auth\base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: authapp_user.username
+ERROR 2025-09-02 13:05:39,639 basehttp 20012 5824 "POST /auth/login/?next=/auth/ HTTP/1.1" 500 183732
+INFO 2025-09-02 13:08:28,327 autoreload 20012 7148 D:\demo\auth_project\authapp\models.py changed, reloading.
+INFO 2025-09-02 13:08:29,047 autoreload 17580 16072 Watching for file changes with StatReloader
+INFO 2025-09-02 13:08:36,991 autoreload 17580 16072 D:\demo\auth_project\authapp\models.py changed, reloading.
+INFO 2025-09-02 13:08:37,648 autoreload 19740 20076 Watching for file changes with StatReloader
+INFO 2025-09-02 13:08:40,034 utils 19740 10136 SMS OTP sent to 9021200359: 784343
+INFO 2025-09-02 13:08:40,053 basehttp 19740 10136 "POST /auth/login/?next=/auth/ HTTP/1.1" 302 0
+INFO 2025-09-02 13:08:40,072 utils 19740 10136 Cleaned up 1 expired OTPs
+INFO 2025-09-02 13:08:40,109 basehttp 19740 10136 "GET /auth/otp-verification/ HTTP/1.1" 200 11999
+INFO 2025-09-02 13:08:59,785 basehttp 19740 10136 "POST /auth/otp-verification/ HTTP/1.1" 200 12020
+INFO 2025-09-02 13:09:11,447 basehttp 19740 10136 "POST /auth/otp-verification/ HTTP/1.1" 302 0
+INFO 2025-09-02 13:09:11,467 basehttp 19740 10136 "GET /auth/profile-completion/ HTTP/1.1" 200 10642
+INFO 2025-09-02 13:12:18,202 basehttp 19740 1984 "GET /auth/profile-completion/ HTTP/1.1" 200 11920
+WARNING 2025-09-02 13:12:18,312 log 19740 1984 Not Found: /favicon.ico
+INFO 2025-09-02 13:12:18,315 basehttp 19740 1984 - Broken pipe from ('127.0.0.1', 53448)
+INFO 2025-09-02 13:15:09,897 basehttp 19740 2792 "GET /auth/profile-completion/ HTTP/1.1" 200 11883
+INFO 2025-09-02 13:31:38,591 basehttp 19740 2792 "GET /auth/profile-completion/ HTTP/1.1" 200 12405
+INFO 2025-09-02 13:32:30,770 basehttp 19740 2792 "GET /auth/profile-completion/ HTTP/1.1" 200 12405
+INFO 2025-09-02 13:47:39,587 basehttp 19740 16344 "GET /auth/profile-completion/ HTTP/1.1" 200 13271
+INFO 2025-09-02 14:43:34,372 basehttp 19740 5764 "GET /auth/profile-completion/ HTTP/1.1" 200 13851
+INFO 2025-09-02 14:44:47,510 basehttp 19740 5764 "POST /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 14:44:47,548 basehttp 19740 5764 "GET /auth/ HTTP/1.1" 200 10901
+INFO 2025-09-02 14:45:56,625 basehttp 19740 5764 "GET /auth/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 14:45:56,645 basehttp 19740 5764 "GET /auth/login/ HTTP/1.1" 200 8407
+INFO 2025-09-02 14:46:04,246 utils 19740 5764 SMS OTP sent to 9021200359: 109026
+INFO 2025-09-02 14:46:04,260 basehttp 19740 5764 "POST /auth/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 14:46:04,295 utils 19740 5764 Cleaned up 1 expired OTPs
+INFO 2025-09-02 14:46:04,318 basehttp 19740 5764 "GET /auth/otp-verification/ HTTP/1.1" 200 11999
+INFO 2025-09-02 14:46:12,845 basehttp 19740 5764 "POST /auth/otp-verification/ HTTP/1.1" 302 0
+INFO 2025-09-02 14:46:12,856 basehttp 19740 5764 "GET /auth/ HTTP/1.1" 200 10873
+INFO 2025-09-02 14:46:32,855 basehttp 19740 5764 "GET /auth/profile/ HTTP/1.1" 200 13476
+INFO 2025-09-02 14:48:34,742 basehttp 19740 4256 "GET /auth/profile/ HTTP/1.1" 200 15339
+INFO 2025-09-02 14:48:47,830 basehttp 19740 4256 "GET /auth/ HTTP/1.1" 200 10550
+INFO 2025-09-02 14:48:48,807 basehttp 19740 4256 "GET /auth/profile/ HTTP/1.1" 200 15339
+ERROR 2025-09-02 14:57:39,760 log 19740 1636 Internal Server Error: /auth/profile/
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\demo\auth_project\authapp\views.py", line 332, in profile_view
+    return render(request, 'authapp/profile.html', context)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 308: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-09-02 14:57:39,764 basehttp 19740 1636 "GET /auth/profile/ HTTP/1.1" 500 206406
+WARNING 2025-09-02 14:57:39,839 log 19740 1636 Not Found: /favicon.ico
+WARNING 2025-09-02 14:57:39,840 basehttp 19740 1636 "GET /favicon.ico HTTP/1.1" 404 2531
+INFO 2025-09-02 14:58:12,906 basehttp 19740 1636 "GET /auth/profile/ HTTP/1.1" 200 17847
+INFO 2025-09-02 14:58:15,925 basehttp 19740 1636 "GET /static/authapp/india_locations.json HTTP/1.1" 200 1889

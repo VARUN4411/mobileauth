@@ -1,23 +1,128 @@
 {% extends 'base.html' %}
 
 {% block title %}Login - E-commerce{% endblock %}
+{% block extra_css %}
+<style>
+    /* Subtle black & white theme (page-specific) */
+    body {
+        background: linear-gradient(135deg, #ffffff 0%, #f3f3f3 100%);
+    }
+
+    .auth-container {
+        background: #ffffff;
+        border: 1px solid #e6e6e6;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-label {
+        color: #111111;
+    }
+
+    .form-control {
+        background-color: #ffffff;
+        border-color: #d9d9d9;
+        color: #111111;
+        padding: 8px 12px;
+        height: 38px;
+        border-radius: 8px;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    .form-control::placeholder {
+        color: #9a9a9a;
+    }
+
+    .form-control:focus {
+        border-color: #111111;
+        box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.08);
+    }
+
+    .form-control:hover {
+        border-color: #bfbfbf;
+        background-color: #fcfcfc;
+    }
+
+    /* Identifier input tweaks */
+    input[name="identifier"] {
+        letter-spacing: 0.2px;
+        font-variant-numeric: tabular-nums;
+    }
+
+    /* Autofill fix for black & white theme */
+    input.form-control:-webkit-autofill,
+    input.form-control:-webkit-autofill:hover,
+    input.form-control:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+        -webkit-text-fill-color: #111111;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    .text-muted { color: #5e5e5e !important; }
+
+    .btn-primary {
+        background: #111111 !important;
+        color: #ffffff !important;
+        border: 1px solid #111111 !important;
+    }
+
+    .btn-primary:hover {
+        background: #1a1a1a !important;
+        border-color: #1a1a1a !important;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .btn-primary:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.15) !important;
+    }
+
+    .alert-info, .alert-success, .alert-danger, .alert-warning {
+        color: #111111;
+        background-color: #f5f5f5;
+    }
+ 
+.auth-footer {
+    text-align: center;       /* center everything */
+    font-size: 14px;          /* adjust size */
+    padding: 10px 0;
+    border-top: 1px solid #ddd; /* top border */
+  
+    margin-top: 104px;       /* space above footer */
+}
+
+.auth-footer a {
+    color: #0066c0;           /* link color like Amazon */
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.auth-footer .mt-2 {
+    margin-top: 8px;          /* pushes © text to next line */
+    color: #555;
+}
+
+</style>
+{% endblock %}
 
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-6 col-lg-4">
-        <div class="auth-container p-5">
-            <div class="text-center mb-4">
-                <i class="fas fa-user-circle fa-3x text-primary mb-3"></i>
-                <h2 class="fw-bold text-dark">Welcome Back</h2>
-                <p class="text-muted">Enter your mobile number or email to continue</p>
+        <div class="auth-container p-4">
+            <div class="text-center mb-3">
+                
+               
+                <p class="text-muted">Enter your mobile number</p>
             </div>
             
-            <form method="post" novalidate>
+            <form method="post" novalidate class="mt-2">
                 {% csrf_token %}
                 
-                <div class="mb-4">
+                <div class="mb-3">
                     <label for="{{ form.identifier.id_for_label }}" class="form-label fw-semibold">
-                        <i class="fas fa-mobile-alt me-2"></i>Mobile Number or Email
+                        <i class="fas fa-mobile-alt me-2"></i>Mobile Number
                     </label>
                     {{ form.identifier }}
                     {% if form.identifier.errors %}
@@ -29,14 +134,14 @@
                     {% endif %}
                 </div>
                 
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary btn-lg">
+                <div class="d-grid mt-2">
+                    <button type="submit" class="btn btn-primary btn-sm py-2">
                         <i class="fas fa-paper-plane me-2"></i>Send OTP
                     </button>
                 </div>
             </form>
             
-            <div class="text-center mt-4">
+            <div class="text-center mt-3">
                 <p class="text-muted small">
                     <i class="fas fa-shield-alt me-1"></i>
                     We'll send a secure OTP to verify your identity
@@ -45,31 +150,37 @@
         </div>
     </div>
 </div>
+<div class="auth-footer">
+    <div>
+    <a href="#">Conditions of Use</a>
+    &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+    <a href="#">Privacy Notice</a>
+    &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+    <a href="#">Help</a>
+</div>
+    <div class="mt-2">© 1996–2025, E-commerce Site, Inc. or its affiliates</div>
+</div>
 {% endblock %}
 
 {% block extra_js %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Auto-format mobile numbers
-    const identifierInput = document.getElementById('{{ form.identifier.id_for_label }}');
-    
-    identifierInput.addEventListener('input', function(e) {
-        let value = e.target.value;
-        
-        // If it looks like a mobile number, format it
-        if (value.length > 0 && !value.includes('@')) {
-            // Remove all non-digits
-            value = value.replace(/\D/g, '');
-            
-            // Add + if it's a mobile number
-            if (value.length > 0 && !value.startsWith('+')) {
-                value = '+' + value;
+    // Friendly numeric input behavior for mobile numbers
+    const identifierInput = document.querySelector('input[name="identifier"]');
+    if (identifierInput) {
+        identifierInput.setAttribute('inputmode', 'numeric');
+        identifierInput.setAttribute('pattern', '[0-9]*');
+        identifierInput.setAttribute('autocomplete', 'tel');
+
+        identifierInput.addEventListener('input', function(e) {
+            let value = e.target.value;
+            // If user isn't typing an email, keep only digits
+            if (!value.includes('@')) {
+                value = value.replace(/\D/g, '');
+                e.target.value = value;
             }
-            
-            e.target.value = value;
-        }
-    });
+        });
+    }
 });
 </script>
 {% endblock %}
-

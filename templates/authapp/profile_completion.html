@@ -2,20 +2,112 @@
 
 {% block title %}Complete Profile - E-commerce{% endblock %}
 
+{% block extra_css %}
+{% load static %}
+<style>
+    /* Subtle black & white theme to match login */
+    html, body { height: 100%; }
+    body { background: linear-gradient(135deg, #ffffff 0%, #f3f3f3 100%); }
+
+    /* Make base container full width on this page and reduce default padding */
+    .container { max-width: 100% !important; padding-left: 12px; padding-right: 12px; }
+
+    /* Make form section full-width feel (no card look) */
+    .profile-section {
+        background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+        border: 1px solid #ececec;
+        border-radius: 10px;
+        padding: 16px 12px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+    @media (min-width: 768px) {
+        .profile-section { padding: 20px 16px; }
+    }
+
+    /* Full-viewport layout, no scroll */
+    .profile-full {
+        height: calc(100vh - 0px);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 12px;
+        overflow: hidden;
+    }
+    .profile-form-wrap { width: 100%; max-width: 1100px; }
+
+    .form-label { color: #111111; font-size: 0.92rem; margin-bottom: 4px; letter-spacing: .2px; }
+    .text-muted { color: #5e5e5e !important; }
+
+    .form-control {
+        background-color: #ffffff;
+        border-color: #d9d9d9;
+        color: #111111;
+        padding: 8px 12px;
+        height: 36px;
+        border-radius: 8px;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+    .form-control:hover { border-color: #bdbdbd; background-color: #fcfcfc; }
+    .form-control:focus { border-color: #0f0f0f; box-shadow: 0 6px 18px rgba(0,0,0,0.08), 0 0 0 3px rgba(0,0,0,0.06); }
+    .form-control::placeholder { color: #9a9a9a; }
+
+    /* Validation states */
+    .is-valid { border-color: #a3d9a5 !important; box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.12) !important; }
+    .is-invalid { border-color: #ef9a9a !important; box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.12) !important; }
+
+    .btn-primary { background: #111111 !important; border: 1px solid #111111 !important; border-radius: 8px; }
+    .btn-primary:hover { background: #1a1a1a !important; border-color: #1a1a1a !important; box-shadow: 0 8px 22px rgba(0,0,0,0.16); transform: translateY(-1px); }
+    .btn-primary:focus { box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.15) !important; }
+
+    /* Avoid large vertical gaps */
+    .mb-4 { margin-bottom: 1rem !important; }
+    .mb-3 { margin-bottom: 0.75rem !important; }
+
+    /* Premium header & divider */
+    .section-heading { display:flex; align-items:center; gap:10px; }
+    .section-heading h3 { font-size: 1.1rem; margin: 0; }
+    .section-heading .divider { flex:1; height:1px; background: linear-gradient(90deg, #dcdcdc, #f2f2f2); border-radius: 1px; }
+
+    /* Compact grid spacing */
+    .row.g-compact { --bs-gutter-x: 0.75rem; --bs-gutter-y: 0.75rem; }
+
+    /* Field block hover for premium feel */
+    .mb-3:hover > .form-control { background-color: #fefefe; }
+
+    /* Ultra-compact on small screens to preserve no-scroll */
+    @media (max-height: 700px) {
+        .form-control { height: 34px; padding: 6px 10px; }
+        .form-label { margin-bottom: 2px; }
+        .mb-3 { margin-bottom: 0.6rem !important; }
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 576px) {
+        .container { padding-left: 8px; padding-right: 8px; }
+        .profile-section { padding: 12px 10px; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.04); }
+        .section-heading h3 { font-size: 1rem; }
+        .form-control { height: 34px; padding: 6px 10px; font-size: 0.95rem; }
+        .form-label { font-size: 0.9rem; }
+        .d-flex.justify-content-end { justify-content: stretch !important; }
+        .d-flex.justify-content-end .btn { width: 100%; }
+    }
+</style>
+{% endblock %}
+
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-8 col-lg-6">
-        <div class="auth-container p-5">
-            <div class="text-center mb-4">
-                <i class="fas fa-user-plus fa-3x text-primary mb-3"></i>
-                <h2 class="fw-bold text-dark">Complete Your Profile</h2>
-                <p class="text-muted">Tell us a bit about yourself to get started</p>
+<div class="profile-full">
+    <div class="profile-form-wrap">
+        <div class="profile-section">
+            <div class="mb-2 section-heading">
+                <h3 class="fw-semibold text-dark">Complete Your Profile</h3>
+                <span class="divider"></span>
             </div>
+            <p class="text-muted small mb-2">Tell us a bit about yourself to get started</p>
             
             <form method="post" novalidate>
                 {% csrf_token %}
                 
-                <div class="row">
+                <div class="row g-compact">
                     <div class="col-md-6 mb-3">
                         <label for="{{ form.first_name.id_for_label }}" class="form-label fw-semibold">
                             <i class="fas fa-user me-2"></i>First Name *
@@ -73,7 +165,7 @@
                     {% endif %}
                 </div>
                 
-                <div class="row">
+                <div class="row g-compact">
                     <div class="col-md-6 mb-3">
                         <label for="{{ form.city.id_for_label }}" class="form-label fw-semibold">
                             <i class="fas fa-city me-2"></i>City *
@@ -103,7 +195,7 @@
                     </div>
                 </div>
                 
-                <div class="row">
+                <div class="row g-compact">
                     <div class="col-md-6 mb-3">
                         <label for="{{ form.postal_code.id_for_label }}" class="form-label fw-semibold">
                             <i class="fas fa-mail-bulk me-2"></i>Postal Code *
@@ -133,7 +225,7 @@
                     </div>
                 </div>
                 
-                <div class="mb-4">
+                <div class="mb-3">
                     <label for="{{ form.date_of_birth.id_for_label }}" class="form-label fw-semibold">
                         <i class="fas fa-calendar me-2"></i>Date of Birth
                     </label>
@@ -147,19 +239,12 @@
                     {% endif %}
                 </div>
                 
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary btn-lg">
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary btn-sm py-2 px-3">
                         <i class="fas fa-save me-2"></i>Complete Profile
                     </button>
                 </div>
             </form>
-            
-            <div class="text-center mt-4">
-                <p class="text-muted small">
-                    <i class="fas fa-info-circle me-1"></i>
-                    Fields marked with * are required
-                </p>
-            </div>
         </div>
     </div>
 </div>
@@ -185,6 +270,65 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    // Debounced autocomplete for City and State (India)
+    const DEBOUNCE_MS = 300;
+    let locationsCache = null;
+    let debounceTimers = {};
+
+    function loadLocations() {
+        if (locationsCache) return Promise.resolve(locationsCache);
+        return fetch('{% static "authapp/india_locations.json" %}')
+            .then(r => r.json())
+            .then(data => { locationsCache = data; return data; })
+            .catch(() => ({ states: [], cities: [] }));
+    }
+
+    function setupAutocomplete(inputEl, type) {
+        if (!inputEl) return;
+        inputEl.setAttribute('autocomplete', 'off');
+        inputEl.setAttribute('role', 'combobox');
+        inputEl.setAttribute('aria-autocomplete', 'list');
+
+        const list = document.createElement('div');
+        list.className = 'list-group position-absolute w-100 shadow-sm';
+        list.style.zIndex = 1050;
+        list.style.maxHeight = '180px';
+        list.style.overflowY = 'auto';
+        list.style.display = 'none';
+        inputEl.parentElement.style.position = 'relative';
+        inputEl.parentElement.appendChild(list);
+
+        function hideList() { list.style.display = 'none'; list.innerHTML = ''; }
+        function showList(items) {
+            list.innerHTML = '';
+            items.forEach(text => {
+                const a = document.createElement('button');
+                a.type = 'button';
+                a.className = 'list-group-item list-group-item-action py-2';
+                a.textContent = text;
+                a.addEventListener('click', () => { inputEl.value = text; hideList(); });
+                list.appendChild(a);
+            });
+            list.style.display = items.length ? 'block' : 'none';
+        }
+
+        inputEl.addEventListener('input', () => {
+            clearTimeout(debounceTimers[type]);
+            debounceTimers[type] = setTimeout(async () => {
+                const q = inputEl.value.trim().toLowerCase();
+                if (q.length < 2) { hideList(); return; }
+                const data = await loadLocations();
+                const source = type === 'state' ? data.states : data.cities;
+                const matches = source.filter(x => x.toLowerCase().includes(q)).slice(0, 10);
+                showList(matches);
+            }, DEBOUNCE_MS);
+        });
+
+        inputEl.addEventListener('blur', () => setTimeout(hideList, 150));
+    }
+
+    setupAutocomplete(document.getElementById('{{ form.city.id_for_label }}'), 'city');
+    setupAutocomplete(document.getElementById('{{ form.state.id_for_label }}'), 'state');
 });
 </script>
 {% endblock %}
