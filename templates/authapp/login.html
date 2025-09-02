@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - E-commerce{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+        <div class="auth-container p-5">
+            <div class="text-center mb-4">
+                <i class="fas fa-user-circle fa-3x text-primary mb-3"></i>
+                <h2 class="fw-bold text-dark">Welcome Back</h2>
+                <p class="text-muted">Enter your mobile number or email to continue</p>
+            </div>
+            
+            <form method="post" novalidate>
+                {% csrf_token %}
+                
+                <div class="mb-4">
+                    <label for="{{ form.identifier.id_for_label }}" class="form-label fw-semibold">
+                        <i class="fas fa-mobile-alt me-2"></i>Mobile Number or Email
+                    </label>
+                    {{ form.identifier }}
+                    {% if form.identifier.errors %}
+                        <div class="invalid-feedback d-block">
+                            {% for error in form.identifier.errors %}
+                                <i class="fas fa-exclamation-circle me-1"></i>{{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-paper-plane me-2"></i>Send OTP
+                    </button>
+                </div>
+            </form>
+            
+            <div class="text-center mt-4">
+                <p class="text-muted small">
+                    <i class="fas fa-shield-alt me-1"></i>
+                    We'll send a secure OTP to verify your identity
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Auto-format mobile numbers
+    const identifierInput = document.getElementById('{{ form.identifier.id_for_label }}');
+    
+    identifierInput.addEventListener('input', function(e) {
+        let value = e.target.value;
+        
+        // If it looks like a mobile number, format it
+        if (value.length > 0 && !value.includes('@')) {
+            // Remove all non-digits
+            value = value.replace(/\D/g, '');
+            
+            // Add + if it's a mobile number
+            if (value.length > 0 && !value.startsWith('+')) {
+                value = '+' + value;
+            }
+            
+            e.target.value = value;
+        }
+    });
+});
+</script>
+{% endblock %}
+

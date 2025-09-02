@@ -1,0 +1,18 @@
+Django>=5.2.4
+Pillow>=10.0.0
+python-decouple>=3.8
+django-crispy-forms>=2.0
+crispy-bootstrap5>=0.7
+
+# For production SMS/Email services (optional)
+# twilio>=8.0.0
+# boto3>=1.26.0
+# django-ses>=3.0.0
+
+# For enhanced security (optional)
+# django-ratelimit>=4.0.0
+# django-axes>=6.0.0
+
+# For development
+# django-debug-toolbar>=4.0.0
+

@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - E-commerce{% endblock %}
+
+{% block content %}
+<div class="welcome-section text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">
+            <i class="fas fa-hand-wave me-3"></i>Hello, {{ full_name }}!
+        </h1>
+        <p class="lead mb-0">Welcome to your personalized shopping experience</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="fas fa-shopping-bag me-2 text-primary"></i>
+                    Quick Actions
+                </h5>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="d-grid">
+                            <a href="#" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-search me-2"></i>Browse Products
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-grid">
+                            <a href="#" class="btn btn-outline-success btn-lg">
+                                <i class="fas fa-shopping-cart me-2"></i>View Cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="fas fa-fire me-2 text-danger"></i>
+                    Trending Products
+                </h5>
+                <p class="card-text text-muted">
+                    Discover the latest and most popular products in our collection.
+                </p>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt fa-2x text-primary mb-2"></i>
+                                <h6 class="card-title">Smartphones</h6>
+                                <p class="card-text small text-muted">Latest models</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-laptop fa-2x text-success mb-2"></i>
+                                <h6 class="card-title">Laptops</h6>
+                                <p class="card-text small text-muted">High performance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-headphones fa-2x text-warning mb-2"></i>
+                                <h6 class="card-title">Audio</h6>
+                                <p class="card-text small text-muted">Premium sound</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="fas fa-user-circle me-2 text-info"></i>
+                    Your Profile
+                </h5>
+                <div class="d-grid gap-2">
+                    <a href="{% url 'authapp:profile' %}" class="btn btn-outline-info">
+                        <i class="fas fa-edit me-2"></i>Edit Profile
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary">
+                        <i class="fas fa-cog me-2"></i>Settings
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="fas fa-bell me-2 text-warning"></i>
+                    Notifications
+                </h5>
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item border-0 px-0">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <div>
+                                <small class="text-muted">Profile completed</small>
+                                <div class="fw-semibold">Welcome aboard!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item border-0 px-0">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-gift text-primary me-2"></i>
+                            <div>
+                                <small class="text-muted">Special offer</small>
+                                <div class="fw-semibold">20% off first order</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if not has_profile %}
+<div class="alert alert-warning alert-dismissible fade show mt-4" role="alert">
+    <i class="fas fa-exclamation-triangle me-2"></i>
+    <strong>Complete your profile!</strong> Please add your personal information to get the best shopping experience.
+    <a href="{% url 'authapp:profile_completion' %}" class="alert-link">Complete Profile</a>
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add some interactive features
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    // Auto-hide alerts after 5 seconds
+    const alerts = document.querySelectorAll('.alert');
+    alerts.forEach(alert => {
+        setTimeout(() => {
+            if (alert.classList.contains('show')) {
+                alert.classList.remove('show');
+            }
+        }, 5000);
+    });
+});
+</script>
+{% endblock %}
+

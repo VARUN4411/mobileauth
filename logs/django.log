@@ -1,0 +1,1140 @@
+INFO 2025-09-01 00:48:47,039 autoreload 24024 20596 Watching for file changes with StatReloader
+INFO 2025-09-01 00:50:14,715 utils 25980 22352 SMS OTP sent to +919876543210: 775860
+INFO 2025-09-01 00:50:35,829 autoreload 24024 20596 D:\demo\auth_project\authapp\models.py changed, reloading.
+INFO 2025-09-01 00:50:36,528 autoreload 18296 11920 Watching for file changes with StatReloader
+INFO 2025-09-01 00:50:36,683 autoreload 8264 10652 Watching for file changes with StatReloader
+INFO 2025-09-01 00:51:06,510 basehttp 18296 11344 "GET / HTTP/1.1" 302 0
+WARNING 2025-09-01 00:51:06,579 log 18296 11344 Not Found: /auth/login/
+WARNING 2025-09-01 00:51:06,581 basehttp 18296 11344 "GET /auth/login/?next=/ HTTP/1.1" 404 4218
+INFO 2025-09-01 00:51:19,895 basehttp 18296 11344 "GET / HTTP/1.1" 302 0
+WARNING 2025-09-01 00:51:19,945 log 18296 11344 Not Found: /auth/login/
+WARNING 2025-09-01 00:51:19,946 basehttp 18296 11344 "GET /auth/login/?next=/ HTTP/1.1" 404 4218
+WARNING 2025-09-01 00:51:20,043 log 18296 11344 Not Found: /favicon.ico
+INFO 2025-09-01 00:51:20,044 basehttp 18296 11344 - Broken pipe from ('127.0.0.1', 2108)
+INFO 2025-09-01 00:52:03,543 basehttp 18296 13760 "GET /login HTTP/1.1" 301 0
+INFO 2025-09-01 00:52:03,625 basehttp 18296 18408 "GET /login/ HTTP/1.1" 200 5284
+ERROR 2025-09-01 00:52:33,668 log 18296 18408 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "D:\demo\auth_project\authapp\views.py", line 39, in login_view
+    user = User.objects.get(mobile=identifier)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+authapp.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 65, in login_view
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserManager.create_user() missing 1 required positional argument: 'username'
+ERROR 2025-09-01 00:52:33,683 basehttp 18296 18408 "POST /login/ HTTP/1.1" 500 85121
+INFO 2025-09-01 00:53:29,857 autoreload 18296 11920 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 00:53:30,536 autoreload 8264 10652 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 00:53:31,079 autoreload 5424 24916 Watching for file changes with StatReloader
+INFO 2025-09-01 00:53:31,540 autoreload 26448 22556 Watching for file changes with StatReloader
+INFO 2025-09-01 01:03:00,518 autoreload 26448 22556 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 01:03:00,518 autoreload 5424 24916 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 01:03:01,281 autoreload 2408 15972 Watching for file changes with StatReloader
+INFO 2025-09-01 01:03:01,290 autoreload 20288 7948 Watching for file changes with StatReloader
+INFO 2025-09-01 01:06:02,089 autoreload 2408 15972 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 01:06:02,093 autoreload 20288 7948 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 01:06:02,851 autoreload 9500 15760 Watching for file changes with StatReloader
+INFO 2025-09-01 01:06:02,857 autoreload 24844 23264 Watching for file changes with StatReloader
+INFO 2025-09-01 01:06:19,860 autoreload 9500 15760 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 01:06:19,890 autoreload 24844 23264 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 01:06:20,553 autoreload 11532 26364 Watching for file changes with StatReloader
+INFO 2025-09-01 01:06:20,571 autoreload 13396 26488 Watching for file changes with StatReloader
+INFO 2025-09-01 01:06:26,173 autoreload 13396 26488 D:\demo\auth_project\authapp\models.py changed, reloading.
+INFO 2025-09-01 01:06:26,207 autoreload 11532 26364 D:\demo\auth_project\authapp\admin.py changed, reloading.
+INFO 2025-09-01 01:06:27,104 autoreload 1680 20552 Watching for file changes with StatReloader
+INFO 2025-09-01 01:06:27,104 autoreload 1656 15060 Watching for file changes with StatReloader
+INFO 2025-09-01 01:08:21,365 autoreload 1656 15060 D:\demo\auth_project\auth_project\settings.py changed, reloading.
+INFO 2025-09-01 01:08:21,444 autoreload 1680 20552 D:\demo\auth_project\authapp\urls.py changed, reloading.
+INFO 2025-09-01 01:08:22,536 autoreload 16236 20600 Watching for file changes with StatReloader
+INFO 2025-09-01 01:08:22,573 autoreload 22400 26108 Watching for file changes with StatReloader
+INFO 2025-09-01 01:14:17,428 autoreload 22400 26108 D:\demo\auth_project\auth_project\urls.py changed, reloading.
+INFO 2025-09-01 01:14:17,446 autoreload 16236 20600 D:\demo\auth_project\auth_project\urls.py changed, reloading.
+INFO 2025-09-01 01:14:18,171 autoreload 3128 20980 Watching for file changes with StatReloader
+INFO 2025-09-01 01:14:18,171 autoreload 18668 20472 Watching for file changes with StatReloader
+INFO 2025-09-01 01:15:38,754 autoreload 18668 20472 D:\demo\auth_project\authapp\utils.py changed, reloading.
+INFO 2025-09-01 01:15:38,758 autoreload 3128 20980 D:\demo\auth_project\authapp\models.py changed, reloading.
+INFO 2025-09-01 01:15:39,467 autoreload 26020 18352 Watching for file changes with StatReloader
+INFO 2025-09-01 01:15:39,471 autoreload 1268 4824 Watching for file changes with StatReloader
+INFO 2025-09-01 20:00:40,683 autoreload 5888 1192 Watching for file changes with StatReloader
+INFO 2025-09-01 20:00:43,261 basehttp 5888 10928 "GET / HTTP/1.1" 302 0
+WARNING 2025-09-01 20:00:43,324 log 5888 10928 Not Found: /auth/login/
+WARNING 2025-09-01 20:00:43,325 basehttp 5888 10928 "GET /auth/login/?next=/ HTTP/1.1" 404 4218
+INFO 2025-09-01 20:03:20,429 autoreload 5888 1192 D:\demo\auth_project\authapp\urls.py changed, reloading.
+INFO 2025-09-01 20:03:21,127 autoreload 17824 10628 Watching for file changes with StatReloader
+INFO 2025-09-01 20:03:22,782 basehttp 17824 9608 "GET /auth/login/?next=/ HTTP/1.1" 200 5285
+ERROR 2025-09-01 20:03:54,874 log 17824 9608 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\auth_project\authapp\views.py", line 39, in login_view
+    user = User.objects.get(mobile=identifier)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+authapp.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 65, in login_view
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserManager.create_user() missing 1 required positional argument: 'username'
+ERROR 2025-09-01 20:03:54,882 basehttp 17824 9608 "POST /auth/login/?next=/ HTTP/1.1" 500 86103
+INFO 2025-09-01 20:13:01,693 autoreload 17824 10628 D:\demo\auth_project\authapp\models.py changed, reloading.
+INFO 2025-09-01 20:13:02,401 autoreload 460 5228 Watching for file changes with StatReloader
+INFO 2025-09-01 20:13:20,867 autoreload 460 5228 D:\demo\auth_project\authapp\models.py changed, reloading.
+INFO 2025-09-01 20:13:21,626 autoreload 7960 8780 Watching for file changes with StatReloader
+ERROR 2025-09-01 20:13:31,198 log 7960 8744 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\auth_project\authapp\views.py", line 39, in login_view
+    user = User.objects.get(mobile=identifier)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+authapp.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 65, in login_view
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserManager.create_user() missing 1 required positional argument: 'username'
+ERROR 2025-09-01 20:13:31,201 basehttp 7960 8744 "POST /auth/login/?next=/ HTTP/1.1" 500 86103
+INFO 2025-09-01 20:13:40,279 basehttp 7960 8744 "GET /auth/login/?next=/ HTTP/1.1" 200 5285
+INFO 2025-09-01 20:13:41,729 basehttp 7960 6196 "GET /auth/login/?next=/ HTTP/1.1" 200 5285
+WARNING 2025-09-01 20:13:42,108 log 7960 6196 Not Found: /favicon.ico
+WARNING 2025-09-01 20:13:42,110 basehttp 7960 6196 "GET /favicon.ico HTTP/1.1" 404 4216
+ERROR 2025-09-01 20:13:54,042 log 7960 6196 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\auth_project\authapp\views.py", line 39, in login_view
+    user = User.objects.get(mobile=identifier)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+authapp.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 65, in login_view
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserManager.create_user() missing 1 required positional argument: 'username'
+ERROR 2025-09-01 20:13:54,047 basehttp 7960 6196 "POST /auth/login/?next=/ HTTP/1.1" 500 86103
+INFO 2025-09-01 20:20:03,368 autoreload 18388 10832 Watching for file changes with StatReloader
+INFO 2025-09-01 20:20:05,348 basehttp 18388 12860 "GET / HTTP/1.1" 302 0
+INFO 2025-09-01 20:20:05,366 basehttp 18388 12860 "GET /auth/login/?next=/ HTTP/1.1" 200 5285
+INFO 2025-09-01 20:20:17,941 utils 18388 12860 SMS OTP sent to +9021200359: 073776
+ERROR 2025-09-01 20:20:18,108 log 18388 12860 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\auth_project\authapp\views.py", line 39, in login_view
+    user = User.objects.get(mobile=identifier)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+authapp.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 80, in login_view
+    return redirect('otp_verification')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'otp_verification' not found. 'otp_verification' is not a valid view function or pattern name.
+ERROR 2025-09-01 20:20:18,127 basehttp 18388 12860 "POST /auth/login/?next=/ HTTP/1.1" 500 106677
+INFO 2025-09-01 20:21:46,132 autoreload 18388 10832 D:\demo\auth_project\authapp\urls.py changed, reloading.
+INFO 2025-09-01 20:21:46,818 autoreload 11504 12292 Watching for file changes with StatReloader
+INFO 2025-09-01 20:21:49,771 utils 11504 3256 SMS OTP sent to +9021200359: 304290
+ERROR 2025-09-01 20:21:49,823 log 11504 3256 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 52, in login_view
+    return redirect('otp_verification')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'otp_verification' not found. 'otp_verification' is not a valid view function or pattern name.
+ERROR 2025-09-01 20:21:49,829 basehttp 11504 3256 "POST /auth/login/?next=/ HTTP/1.1" 500 93274
+WARNING 2025-09-01 20:21:49,872 log 11504 3256 Not Found: /favicon.ico
+INFO 2025-09-01 20:21:49,874 basehttp 11504 3256 - Broken pipe from ('127.0.0.1', 51291)
+INFO 2025-09-01 20:21:54,504 autoreload 11504 12292 D:\demo\auth_project\authapp\urls.py changed, reloading.
+INFO 2025-09-01 20:21:55,164 autoreload 9420 5848 Watching for file changes with StatReloader
+INFO 2025-09-01 20:21:56,575 autoreload 9420 5848 D:\demo\auth_project\authapp\urls.py changed, reloading.
+INFO 2025-09-01 20:21:57,230 autoreload 17840 11500 Watching for file changes with StatReloader
+INFO 2025-09-01 20:28:19,382 autoreload 17840 11500 D:\demo\auth_project\authapp\urls.py changed, reloading.
+INFO 2025-09-01 20:28:20,057 autoreload 9568 3232 Watching for file changes with StatReloader
+INFO 2025-09-01 20:28:23,567 autoreload 9568 3232 D:\demo\auth_project\authapp\urls.py changed, reloading.
+INFO 2025-09-01 20:28:24,262 autoreload 5620 8444 Watching for file changes with StatReloader
+INFO 2025-09-01 20:28:49,189 utils 5620 2384 SMS OTP sent to +9021200359: 860191
+ERROR 2025-09-01 20:28:49,244 log 5620 2384 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 52, in login_view
+    return redirect('otp_verification')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'otp_verification' not found. 'otp_verification' is not a valid view function or pattern name.
+ERROR 2025-09-01 20:28:49,248 basehttp 5620 2384 "POST /auth/login/?next=/ HTTP/1.1" 500 93290
+WARNING 2025-09-01 20:28:49,275 log 5620 2384 Not Found: /favicon.ico
+INFO 2025-09-01 20:28:49,276 basehttp 5620 2384 - Broken pipe from ('127.0.0.1', 57089)
+INFO 2025-09-01 20:28:56,109 basehttp 5620 9324 "GET /auth/login/?next=/ HTTP/1.1" 200 6219
+INFO 2025-09-01 20:29:03,807 basehttp 5620 2024 "GET /auth/login/?next=/ HTTP/1.1" 200 5285
+WARNING 2025-09-01 20:29:04,673 log 5620 2024 Not Found: /favicon.ico
+WARNING 2025-09-01 20:29:04,675 basehttp 5620 2024 "GET /favicon.ico HTTP/1.1" 404 4236
+INFO 2025-09-01 20:29:11,834 utils 5620 2024 SMS OTP sent to +9021200359: 353600
+ERROR 2025-09-01 20:29:11,924 log 5620 2024 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 52, in login_view
+    return redirect('otp_verification')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'otp_verification' not found. 'otp_verification' is not a valid view function or pattern name.
+ERROR 2025-09-01 20:29:11,929 basehttp 5620 2024 "POST /auth/login/?next=/ HTTP/1.1" 500 93023
+INFO 2025-09-01 20:29:19,611 basehttp 5620 2024 "GET /auth/login/?next=/ HTTP/1.1" 200 5611
+INFO 2025-09-01 23:09:52,271 autoreload 5620 8444 D:\demo\auth_project\authapp\urls.py changed, reloading.
+INFO 2025-09-01 23:09:52,939 autoreload 19892 3148 Watching for file changes with StatReloader
+INFO 2025-09-01 23:12:01,448 basehttp 19892 18080 "GET / HTTP/1.1" 302 0
+INFO 2025-09-01 23:12:01,484 basehttp 19892 18080 "GET /auth/login/?next=/ HTTP/1.1" 200 5285
+WARNING 2025-09-01 23:12:01,570 log 19892 18080 Not Found: /favicon.ico
+INFO 2025-09-01 23:12:01,571 basehttp 19892 18080 - Broken pipe from ('127.0.0.1', 39919)
+INFO 2025-09-01 23:12:10,279 utils 19892 2380 SMS OTP sent to +9021200359: 859334
+ERROR 2025-09-01 23:12:10,326 log 19892 2380 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 52, in login_view
+    return redirect('otp_verification')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'otp_verification' not found. 'otp_verification' is not a valid view function or pattern name.
+ERROR 2025-09-01 23:12:10,329 basehttp 19892 2380 "POST /auth/login/?next=/ HTTP/1.1" 500 93023
+INFO 2025-09-01 23:12:21,491 utils 19892 12112 SMS OTP sent to +9021200359: 484853
+ERROR 2025-09-01 23:12:21,510 log 19892 12112 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 52, in login_view
+    return redirect('otp_verification')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'otp_verification' not found. 'otp_verification' is not a valid view function or pattern name.
+ERROR 2025-09-01 23:12:21,514 basehttp 19892 12112 "POST /auth/login/?next=/ HTTP/1.1" 500 93539
+WARNING 2025-09-01 23:12:21,537 log 19892 12112 Not Found: /favicon.ico
+WARNING 2025-09-01 23:12:21,537 basehttp 19892 12112 "GET /favicon.ico HTTP/1.1" 404 4216
+INFO 2025-09-01 23:14:17,848 autoreload 19892 3148 D:\demo\auth_project\authapp\urls.py changed, reloading.
+INFO 2025-09-01 23:14:18,372 autoreload 5696 7968 Watching for file changes with StatReloader
+INFO 2025-09-01 23:14:27,902 autoreload 5696 7968 D:\demo\auth_project\auth_project\urls.py changed, reloading.
+INFO 2025-09-01 23:14:28,384 autoreload 16756 16948 Watching for file changes with StatReloader
+WARNING 2025-09-01 23:14:30,224 log 16756 3440 Not Found: /
+WARNING 2025-09-01 23:14:30,226 basehttp 16756 3440 "GET / HTTP/1.1" 404 2480
+INFO 2025-09-01 23:14:39,692 basehttp 16756 3440 "GET /auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:14:39,723 basehttp 16756 3440 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5915
+INFO 2025-09-01 23:14:42,705 basehttp 16756 3440 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5285
+INFO 2025-09-01 23:14:50,962 utils 16756 3440 SMS OTP sent to +9021200359: 518994
+ERROR 2025-09-01 23:14:51,111 log 16756 3440 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 52, in login_view
+    return redirect('otp_verification')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'otp_verification' not found. 'otp_verification' is not a valid view function or pattern name.
+ERROR 2025-09-01 23:14:51,127 basehttp 16756 3440 "POST /auth/login/?next=/auth/ HTTP/1.1" 500 93063
+INFO 2025-09-01 23:17:22,461 autoreload 9932 7188 Watching for file changes with StatReloader
+WARNING 2025-09-01 23:17:23,666 log 9932 4720 Not Found: /
+WARNING 2025-09-01 23:17:23,667 basehttp 9932 4720 "GET / HTTP/1.1" 404 2480
+INFO 2025-09-01 23:17:44,302 basehttp 9932 4720 "GET /auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:17:44,326 basehttp 9932 4720 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5611
+INFO 2025-09-01 23:17:56,312 utils 9932 4720 SMS OTP sent to +90221200359: 894045
+ERROR 2025-09-01 23:17:56,473 log 9932 4720 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\auth_project\authapp\views.py", line 39, in login_view
+    user = User.objects.get(mobile=identifier)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+authapp.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 80, in login_view
+    return redirect('otp_verification')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'otp_verification' not found. 'otp_verification' is not a valid view function or pattern name.
+ERROR 2025-09-01 23:17:56,491 basehttp 9932 4720 "POST /auth/login/?next=/auth/ HTTP/1.1" 500 106765
+INFO 2025-09-01 23:21:17,695 autoreload 9932 7188 D:\demo\auth_project\authapp\models.py changed, reloading.
+INFO 2025-09-01 23:21:18,235 autoreload 404 5616 Watching for file changes with StatReloader
+WARNING 2025-09-01 23:21:42,212 log 404 21424 Not Found: /
+WARNING 2025-09-01 23:21:42,212 basehttp 404 21424 "GET / HTTP/1.1" 404 2480
+INFO 2025-09-01 23:21:54,089 basehttp 404 21424 "GET /auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:21:54,105 basehttp 404 21424 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5612
+INFO 2025-09-01 23:22:03,378 utils 404 21424 SMS OTP sent to +9021200359: 852833
+ERROR 2025-09-01 23:22:03,503 log 404 21424 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 52, in login_view
+    return redirect('otp_verification')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'otp_verification' not found. 'otp_verification' is not a valid view function or pattern name.
+ERROR 2025-09-01 23:22:03,512 basehttp 404 21424 "POST /auth/login/?next=/auth/ HTTP/1.1" 500 93063
+INFO 2025-09-01 23:26:07,989 autoreload 404 5616 D:\demo\auth_project\authapp\urls.py changed, reloading.
+INFO 2025-09-01 23:26:08,484 autoreload 1992 2468 Watching for file changes with StatReloader
+INFO 2025-09-01 23:26:09,891 autoreload 1992 2468 D:\demo\auth_project\authapp\urls.py changed, reloading.
+INFO 2025-09-01 23:26:10,401 autoreload 3916 18616 Watching for file changes with StatReloader
+INFO 2025-09-01 23:27:09,909 autoreload 3916 18616 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:27:10,559 autoreload 21072 17572 Watching for file changes with StatReloader
+INFO 2025-09-01 23:27:21,441 utils 21072 15044 SMS OTP sent to +9021200359: 969191
+INFO 2025-09-01 23:27:21,467 basehttp 21072 15044 "POST /auth/login/?next=/auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:27:21,483 utils 21072 21004 Cleaned up 7 expired OTPs
+INFO 2025-09-01 23:27:21,501 basehttp 21072 21004 "GET /auth/otp-verification/ HTTP/1.1" 200 9282
+WARNING 2025-09-01 23:27:21,965 log 21072 21004 Not Found: /favicon.ico
+WARNING 2025-09-01 23:27:21,967 basehttp 21072 21004 "GET /favicon.ico HTTP/1.1" 404 2531
+INFO 2025-09-01 23:27:42,198 utils 21072 21004 SMS OTP sent to +9021200359: 024296
+INFO 2025-09-01 23:27:42,202 basehttp 21072 21004 "POST /auth/resend-otp/ HTTP/1.1" 200 38
+INFO 2025-09-01 23:28:56,683 autoreload 21072 17572 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:28:57,197 autoreload 20604 1272 Watching for file changes with StatReloader
+WARNING 2025-09-01 23:29:04,825 log 20604 7888 Not Found: /
+WARNING 2025-09-01 23:29:04,826 basehttp 20604 7888 "GET / HTTP/1.1" 404 2480
+INFO 2025-09-01 23:29:19,378 basehttp 20604 7888 "GET /auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:29:19,391 basehttp 20604 7888 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5285
+INFO 2025-09-01 23:29:26,476 utils 20604 7888 SMS OTP sent to +9021200359: 495324
+INFO 2025-09-01 23:29:26,483 basehttp 20604 7888 "POST /auth/login/?next=/auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:29:26,496 utils 20604 7888 Cleaned up 1 expired OTPs
+INFO 2025-09-01 23:29:26,500 basehttp 20604 7888 "GET /auth/otp-verification/ HTTP/1.1" 200 8978
+INFO 2025-09-01 23:35:30,366 utils 20604 16280 Cleaned up 1 expired OTPs
+INFO 2025-09-01 23:35:30,370 basehttp 20604 16280 "GET /auth/otp-verification/ HTTP/1.1" 200 8653
+INFO 2025-09-01 23:35:41,079 basehttp 20604 5888 "GET /auth/otp-verification/ HTTP/1.1" 200 8653
+WARNING 2025-09-01 23:35:41,592 log 20604 5888 Not Found: /favicon.ico
+WARNING 2025-09-01 23:35:41,594 basehttp 20604 5888 "GET /favicon.ico HTTP/1.1" 404 2531
+INFO 2025-09-01 23:35:45,720 basehttp 20604 5888 "GET /auth/login/ HTTP/1.1" 200 5285
+INFO 2025-09-01 23:35:52,126 basehttp 20604 2980 "GET /auth/login/ HTTP/1.1" 200 5285
+WARNING 2025-09-01 23:35:52,653 log 20604 2980 Not Found: /favicon.ico
+WARNING 2025-09-01 23:35:52,655 basehttp 20604 2980 "GET /favicon.ico HTTP/1.1" 404 2531
+INFO 2025-09-01 23:36:01,386 utils 20604 2980 SMS OTP sent to +9021200359: 642752
+INFO 2025-09-01 23:36:01,398 basehttp 20604 2980 "POST /auth/login/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:36:01,431 basehttp 20604 2980 "GET /auth/otp-verification/ HTTP/1.1" 200 8979
+INFO 2025-09-01 23:37:32,215 autoreload 20604 1272 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:37:32,826 autoreload 14780 5516 Watching for file changes with StatReloader
+INFO 2025-09-01 23:37:39,284 autoreload 14780 5516 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:37:39,823 autoreload 9708 5620 Watching for file changes with StatReloader
+WARNING 2025-09-01 23:37:41,672 log 9708 19896 Not Found: /
+WARNING 2025-09-01 23:37:41,673 basehttp 9708 19896 "GET / HTTP/1.1" 404 2480
+WARNING 2025-09-01 23:37:41,709 log 9708 19896 Not Found: /favicon.ico
+INFO 2025-09-01 23:37:41,712 basehttp 9708 19896 - Broken pipe from ('127.0.0.1', 61561)
+INFO 2025-09-01 23:37:46,699 basehttp 9708 16964 "GET /auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:37:46,716 basehttp 9708 16964 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5285
+INFO 2025-09-01 23:37:54,848 utils 9708 16964 SMS OTP sent to +9021200359: 534298
+INFO 2025-09-01 23:37:54,865 basehttp 9708 16964 "POST /auth/login/?next=/auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:37:54,900 utils 9708 16964 Cleaned up 2 expired OTPs
+INFO 2025-09-01 23:37:54,922 basehttp 9708 16964 "GET /auth/otp-verification/ HTTP/1.1" 200 8979
+INFO 2025-09-01 23:38:58,478 autoreload 9708 5620 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:38:59,045 autoreload 7660 4864 Watching for file changes with StatReloader
+INFO 2025-09-01 23:39:02,395 autoreload 7660 4864 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:39:02,847 autoreload 5668 21096 Watching for file changes with StatReloader
+INFO 2025-09-01 23:39:07,260 autoreload 5668 21096 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:39:07,742 autoreload 18256 21236 Watching for file changes with StatReloader
+INFO 2025-09-01 23:39:11,075 autoreload 18256 21236 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:39:11,569 autoreload 6736 18560 Watching for file changes with StatReloader
+INFO 2025-09-01 23:39:18,049 autoreload 6736 18560 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:39:18,576 autoreload 2660 18960 Watching for file changes with StatReloader
+WARNING 2025-09-01 23:39:25,100 log 2660 2368 Not Found: /
+WARNING 2025-09-01 23:39:25,101 basehttp 2660 2368 "GET / HTTP/1.1" 404 2480
+INFO 2025-09-01 23:39:29,980 basehttp 2660 2368 "GET /auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:39:29,999 basehttp 2660 2368 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5285
+INFO 2025-09-01 23:39:37,006 utils 2660 2368 SMS OTP sent to +9021200359: 577730
+INFO 2025-09-01 23:39:37,013 basehttp 2660 2368 "POST /auth/login/?next=/auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:39:37,026 utils 2660 2368 Cleaned up 1 expired OTPs
+INFO 2025-09-01 23:39:37,030 basehttp 2660 2368 "GET /auth/otp-verification/ HTTP/1.1" 200 9067
+ERROR 2025-09-01 23:40:05,100 log 2660 2368 Internal Server Error: /auth/otp-verification/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 145, in otp_verification_view
+    return redirect('profile_completion')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'profile_completion' not found. 'profile_completion' is not a valid view function or pattern name.
+ERROR 2025-09-01 23:40:05,103 basehttp 2660 2368 "POST /auth/otp-verification/ HTTP/1.1" 500 93399
+INFO 2025-09-01 23:41:02,041 autoreload 2660 18960 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:41:02,535 autoreload 11432 16824 Watching for file changes with StatReloader
+INFO 2025-09-01 23:41:36,073 autoreload 11432 16824 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:41:36,590 autoreload 8148 21140 Watching for file changes with StatReloader
+INFO 2025-09-01 23:42:01,744 autoreload 8148 21140 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:42:02,395 autoreload 15072 3704 Watching for file changes with StatReloader
+INFO 2025-09-01 23:42:10,879 autoreload 15072 3704 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-01 23:42:11,389 autoreload 4340 16996 Watching for file changes with StatReloader
+WARNING 2025-09-01 23:42:14,194 log 4340 10680 Forbidden (CSRF token from POST incorrect.): /auth/otp-verification/
+WARNING 2025-09-01 23:42:14,194 basehttp 4340 10680 "POST /auth/otp-verification/ HTTP/1.1" 403 2503
+INFO 2025-09-01 23:42:29,803 autoreload 2868 3556 Watching for file changes with StatReloader
+WARNING 2025-09-01 23:42:31,989 log 2868 3328 Not Found: /
+WARNING 2025-09-01 23:42:31,990 basehttp 2868 3328 "GET / HTTP/1.1" 404 2480
+INFO 2025-09-01 23:42:51,986 basehttp 2868 3328 "GET /auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:42:52,015 basehttp 2868 3328 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5626
+INFO 2025-09-01 23:43:03,056 utils 2868 3328 SMS OTP sent to +9021200359: 394095
+INFO 2025-09-01 23:43:03,074 basehttp 2868 3328 "POST /auth/login/?next=/auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:43:03,114 basehttp 2868 3328 "GET /auth/otp-verification/ HTTP/1.1" 200 9067
+INFO 2025-09-01 23:43:11,869 basehttp 2868 3328 "POST /auth/otp-verification/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:43:11,914 basehttp 2868 3328 "GET /auth/profile-completion/ HTTP/1.1" 200 10642
+ERROR 2025-09-01 23:44:58,223 views 2868 3328 Error creating profile: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+INFO 2025-09-01 23:44:58,237 basehttp 2868 3328 "POST /auth/profile-completion/ HTTP/1.1" 200 11113
+INFO 2025-09-01 23:45:04,438 basehttp 2868 3328 "GET /auth/ HTTP/1.1" 200 10968
+INFO 2025-09-01 23:45:14,311 basehttp 2868 3328 "GET /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:45:14,348 basehttp 2868 3328 "GET /auth/profile-completion/ HTTP/1.1" 200 10638
+INFO 2025-09-01 23:45:19,270 basehttp 2868 3328 "GET /auth/ HTTP/1.1" 200 10968
+WARNING 2025-09-01 23:45:19,330 log 2868 3328 Not Found: /favicon.ico
+INFO 2025-09-01 23:45:19,332 basehttp 2868 3328 - Broken pipe from ('127.0.0.1', 1281)
+INFO 2025-09-01 23:52:05,834 autoreload 1284 4452 Watching for file changes with StatReloader
+WARNING 2025-09-01 23:52:07,700 log 1284 19948 Not Found: /
+WARNING 2025-09-01 23:52:07,700 basehttp 1284 19948 "GET / HTTP/1.1" 404 2480
+INFO 2025-09-01 23:52:18,289 basehttp 1284 19948 "GET /auth/ HTTP/1.1" 200 10968
+ERROR 2025-09-01 23:52:30,255 log 1284 19948 Internal Server Error: /auth/logout/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 255, in logout_view
+    return redirect('login')
+           ^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+ERROR 2025-09-01 23:52:30,263 basehttp 1284 19948 "GET /auth/logout/ HTTP/1.1" 500 90716
+WARNING 2025-09-01 23:52:30,317 log 1284 19948 Not Found: /favicon.ico
+INFO 2025-09-01 23:52:30,319 basehttp 1284 19948 - Broken pipe from ('127.0.0.1', 9024)
+INFO 2025-09-01 23:52:37,335 basehttp 1284 4304 "GET /auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:52:37,352 basehttp 1284 4304 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5626
+WARNING 2025-09-01 23:52:37,427 log 1284 4304 Not Found: /favicon.ico
+INFO 2025-09-01 23:52:37,428 basehttp 1284 4304 - Broken pipe from ('127.0.0.1', 9421)
+INFO 2025-09-01 23:52:48,134 utils 1284 8740 SMS OTP sent to +9021200359: 108924
+INFO 2025-09-01 23:52:48,151 basehttp 1284 8740 "POST /auth/login/?next=/auth/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:52:48,184 utils 1284 8740 Cleaned up 3 expired OTPs
+INFO 2025-09-01 23:52:48,204 basehttp 1284 8740 "GET /auth/otp-verification/ HTTP/1.1" 200 9067
+INFO 2025-09-01 23:52:58,559 basehttp 1284 8740 "POST /auth/otp-verification/ HTTP/1.1" 302 0
+INFO 2025-09-01 23:52:58,584 basehttp 1284 8740 "GET /auth/profile-completion/ HTTP/1.1" 200 10642
+INFO 2025-09-02 00:21:13,802 autoreload 1284 4452 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:21:14,768 autoreload 6480 18868 Watching for file changes with StatReloader
+INFO 2025-09-02 00:21:26,463 autoreload 6480 18868 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:21:27,135 autoreload 18268 19540 Watching for file changes with StatReloader
+WARNING 2025-09-02 00:21:47,732 log 18268 11856 Not Found: /
+WARNING 2025-09-02 00:21:47,733 basehttp 18268 11856 "GET / HTTP/1.1" 404 2480
+INFO 2025-09-02 00:21:53,458 basehttp 18268 11856 "GET /auth/ HTTP/1.1" 200 10968
+WARNING 2025-09-02 00:21:53,592 log 18268 11856 Not Found: /favicon.ico
+INFO 2025-09-02 00:21:53,594 basehttp 18268 11856 - Broken pipe from ('127.0.0.1', 33048)
+ERROR 2025-09-02 00:21:56,385 log 18268 3148 Internal Server Error: /auth/logout/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 256, in logout_view
+    return redirect('login')
+           ^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+ERROR 2025-09-02 00:21:56,393 basehttp 18268 3148 "GET /auth/logout/ HTTP/1.1" 500 90716
+WARNING 2025-09-02 00:21:56,443 log 18268 3148 Not Found: /favicon.ico
+INFO 2025-09-02 00:21:56,444 basehttp 18268 3148 - Broken pipe from ('127.0.0.1', 33149)
+INFO 2025-09-02 00:23:08,523 autoreload 18268 19540 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:23:09,417 autoreload 1448 12384 Watching for file changes with StatReloader
+INFO 2025-09-02 00:23:19,179 autoreload 1448 12384 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:23:19,858 autoreload 5272 1496 Watching for file changes with StatReloader
+INFO 2025-09-02 00:23:22,664 basehttp 5272 19140 "GET /auth/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:23:22,691 basehttp 5272 19140 "GET /auth/login/ HTTP/1.1" 200 5945
+WARNING 2025-09-02 00:23:22,753 log 5272 19140 Not Found: /favicon.ico
+INFO 2025-09-02 00:23:22,755 basehttp 5272 19140 - Broken pipe from ('127.0.0.1', 34465)
+INFO 2025-09-02 00:23:33,432 utils 5272 18364 SMS OTP sent to +9021200359: 427142
+INFO 2025-09-02 00:23:33,450 basehttp 5272 18364 "POST /auth/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:23:33,484 utils 5272 18364 Cleaned up 2 expired OTPs
+INFO 2025-09-02 00:23:33,507 basehttp 5272 18364 "GET /auth/otp-verification/ HTTP/1.1" 200 9067
+INFO 2025-09-02 00:23:44,042 basehttp 5272 18364 "POST /auth/otp-verification/ HTTP/1.1" 302 0
+ERROR 2025-09-02 00:23:44,160 log 5272 18364 Internal Server Error: /auth/profile-completion/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 190, in profile_completion_view
+    return redirect('home')
+           ^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+ERROR 2025-09-02 00:23:44,172 basehttp 5272 18364 "GET /auth/profile-completion/ HTTP/1.1" 500 96149
+INFO 2025-09-02 00:24:01,322 autoreload 5272 1496 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:24:02,068 autoreload 21164 15084 Watching for file changes with StatReloader
+INFO 2025-09-02 00:24:04,485 autoreload 21164 15084 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:24:05,122 autoreload 15044 19908 Watching for file changes with StatReloader
+INFO 2025-09-02 00:24:10,669 autoreload 15044 19908 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:24:11,317 autoreload 16996 17628 Watching for file changes with StatReloader
+INFO 2025-09-02 00:24:12,764 autoreload 16996 17628 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:24:13,398 autoreload 14148 20928 Watching for file changes with StatReloader
+ERROR 2025-09-02 00:24:13,712 log 14148 8640 Internal Server Error: /auth/profile-completion/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 190, in profile_completion_view
+    return redirect('home')
+           ^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+ERROR 2025-09-02 00:24:13,716 basehttp 14148 8640 "GET /auth/profile-completion/ HTTP/1.1" 500 96149
+WARNING 2025-09-02 00:24:13,738 log 14148 8640 Not Found: /favicon.ico
+INFO 2025-09-02 00:24:13,739 basehttp 14148 8640 - Broken pipe from ('127.0.0.1', 35318)
+INFO 2025-09-02 00:24:32,796 autoreload 14148 20928 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:24:33,550 autoreload 9856 6708 Watching for file changes with StatReloader
+INFO 2025-09-02 00:24:34,979 autoreload 9856 6708 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:24:35,643 autoreload 19244 21312 Watching for file changes with StatReloader
+INFO 2025-09-02 00:24:44,275 autoreload 19244 21312 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:24:44,975 autoreload 18916 20828 Watching for file changes with StatReloader
+INFO 2025-09-02 00:24:46,502 autoreload 18916 20828 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:24:47,215 autoreload 10900 3492 Watching for file changes with StatReloader
+ERROR 2025-09-02 00:24:48,489 log 10900 12492 Internal Server Error: /auth/profile-completion/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 190, in profile_completion_view
+    return redirect('home')
+           ^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+ERROR 2025-09-02 00:24:48,494 basehttp 10900 12492 "GET /auth/profile-completion/ HTTP/1.1" 500 96149
+WARNING 2025-09-02 00:24:48,531 log 10900 12492 Not Found: /favicon.ico
+INFO 2025-09-02 00:24:48,533 basehttp 10900 12492 - Broken pipe from ('127.0.0.1', 35906)
+ERROR 2025-09-02 00:24:49,396 log 10900 9484 Internal Server Error: /auth/profile-completion/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 190, in profile_completion_view
+    return redirect('home')
+           ^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+ERROR 2025-09-02 00:24:49,399 basehttp 10900 9484 "GET /auth/profile-completion/ HTTP/1.1" 500 96149
+INFO 2025-09-02 00:25:00,065 autoreload 10900 3492 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:25:00,858 autoreload 19072 18832 Watching for file changes with StatReloader
+INFO 2025-09-02 00:25:02,304 autoreload 19072 18832 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:25:02,953 autoreload 20500 13280 Watching for file changes with StatReloader
+INFO 2025-09-02 00:25:08,530 autoreload 20500 13280 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:25:09,184 autoreload 17564 5428 Watching for file changes with StatReloader
+INFO 2025-09-02 00:25:15,780 autoreload 17564 5428 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:25:16,474 autoreload 9512 10200 Watching for file changes with StatReloader
+INFO 2025-09-02 00:25:19,532 basehttp 9512 2052 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:19,555 basehttp 9512 2052 "GET /auth/ HTTP/1.1" 200 11309
+WARNING 2025-09-02 00:25:19,618 log 9512 2052 Not Found: /favicon.ico
+INFO 2025-09-02 00:25:19,620 basehttp 9512 2052 - Broken pipe from ('127.0.0.1', 36479)
+INFO 2025-09-02 00:25:21,659 basehttp 9512 12732 "GET /auth/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:21,676 basehttp 9512 12732 "GET /auth/login/ HTTP/1.1" 200 5626
+WARNING 2025-09-02 00:25:21,734 log 9512 12732 Not Found: /favicon.ico
+INFO 2025-09-02 00:25:21,735 basehttp 9512 12732 - Broken pipe from ('127.0.0.1', 36489)
+INFO 2025-09-02 00:25:30,290 utils 9512 21196 SMS OTP sent to +9021200359: 217254
+INFO 2025-09-02 00:25:30,309 basehttp 9512 21196 "POST /auth/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:30,357 basehttp 9512 21196 "GET /auth/otp-verification/ HTTP/1.1" 200 9067
+INFO 2025-09-02 00:25:38,829 basehttp 9512 21196 "POST /auth/otp-verification/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:38,849 basehttp 9512 21196 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:38,873 basehttp 9512 21196 "GET /auth/ HTTP/1.1" 200 11309
+WARNING 2025-09-02 00:25:38,964 log 9512 21196 Not Found: /favicon.ico
+INFO 2025-09-02 00:25:38,966 basehttp 9512 21196 - Broken pipe from ('127.0.0.1', 36623)
+INFO 2025-09-02 00:25:51,250 basehttp 9512 17608 "GET /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:51,267 basehttp 9512 17608 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:51,293 basehttp 9512 17608 "GET /auth/ HTTP/1.1" 200 11305
+WARNING 2025-09-02 00:25:51,373 log 9512 17608 Not Found: /favicon.ico
+INFO 2025-09-02 00:25:51,375 basehttp 9512 17608 - Broken pipe from ('127.0.0.1', 36891)
+INFO 2025-09-02 00:25:54,132 basehttp 9512 6832 "GET /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:54,148 basehttp 9512 6832 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:54,171 basehttp 9512 6832 "GET /auth/ HTTP/1.1" 200 11305
+WARNING 2025-09-02 00:25:54,258 log 9512 6832 Not Found: /favicon.ico
+INFO 2025-09-02 00:25:54,263 basehttp 9512 6832 - Broken pipe from ('127.0.0.1', 36951)
+INFO 2025-09-02 00:25:55,039 basehttp 9512 10504 "GET /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:55,064 basehttp 9512 9308 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:55,087 basehttp 9512 10504 "GET /auth/ HTTP/1.1" 200 11305
+INFO 2025-09-02 00:25:55,768 basehttp 9512 10504 "GET /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:55,796 basehttp 9512 10504 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:55,817 basehttp 9512 10504 "GET /auth/ HTTP/1.1" 200 11305
+INFO 2025-09-02 00:25:56,258 basehttp 9512 10504 "GET /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:56,282 basehttp 9512 10504 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:25:56,311 basehttp 9512 10504 "GET /auth/ HTTP/1.1" 200 11305
+INFO 2025-09-02 00:26:00,489 basehttp 9512 10504 "GET /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:00,508 basehttp 9512 10504 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:00,531 basehttp 9512 10504 "GET /auth/ HTTP/1.1" 200 11305
+WARNING 2025-09-02 00:26:00,619 log 9512 10504 Not Found: /favicon.ico
+INFO 2025-09-02 00:26:00,622 basehttp 9512 10504 - Broken pipe from ('127.0.0.1', 36965)
+INFO 2025-09-02 00:26:01,227 basehttp 9512 9308 "GET /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:01,245 basehttp 9512 9308 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:01,264 basehttp 9512 9308 "GET /auth/ HTTP/1.1" 200 11305
+INFO 2025-09-02 00:26:01,593 basehttp 9512 9308 "GET /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:01,611 basehttp 9512 9308 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:01,633 basehttp 9512 9308 "GET /auth/ HTTP/1.1" 200 11305
+WARNING 2025-09-02 00:26:01,710 log 9512 21272 Not Found: /favicon.ico
+INFO 2025-09-02 00:26:01,713 basehttp 9512 21272 - Broken pipe from ('127.0.0.1', 37051)
+INFO 2025-09-02 00:26:02,109 basehttp 9512 9308 "GET /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:02,127 basehttp 9512 9308 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:02,147 basehttp 9512 9308 "GET /auth/ HTTP/1.1" 200 11305
+INFO 2025-09-02 00:26:03,757 basehttp 9512 9308 "GET /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:03,776 basehttp 9512 9308 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:03,798 basehttp 9512 9308 "GET /auth/ HTTP/1.1" 200 11305
+INFO 2025-09-02 00:26:11,212 basehttp 9512 9308 "GET /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:11,229 basehttp 9512 9308 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:11,250 basehttp 9512 9308 "GET /auth/ HTTP/1.1" 200 11305
+INFO 2025-09-02 00:26:12,684 basehttp 9512 9308 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:26:12,708 basehttp 9512 9308 "GET /auth/ HTTP/1.1" 200 10968
+WARNING 2025-09-02 00:26:12,780 log 9512 9308 Not Found: /favicon.ico
+INFO 2025-09-02 00:26:12,782 basehttp 9512 9308 - Broken pipe from ('127.0.0.1', 36966)
+INFO 2025-09-02 00:30:33,550 basehttp 9512 19200 "GET /auth/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:30:33,558 basehttp 9512 19200 "GET /auth/login/ HTTP/1.1" 200 5626
+INFO 2025-09-02 00:32:00,255 basehttp 9512 19200 "POST /auth/login/ HTTP/1.1" 200 5619
+WARNING 2025-09-02 00:32:00,326 log 9512 19200 Not Found: /favicon.ico
+INFO 2025-09-02 00:32:00,328 basehttp 9512 19200 - Broken pipe from ('127.0.0.1', 40770)
+INFO 2025-09-02 00:32:09,413 utils 9512 9360 SMS OTP sent to +9021200359: 086797
+INFO 2025-09-02 00:32:09,430 basehttp 9512 9360 "POST /auth/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:32:09,461 basehttp 9512 9360 "GET /auth/otp-verification/ HTTP/1.1" 200 9067
+INFO 2025-09-02 00:32:20,422 basehttp 9512 9360 "POST /auth/otp-verification/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:32:20,437 basehttp 9512 9360 "GET /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:32:20,459 basehttp 9512 9360 "GET /auth/ HTTP/1.1" 200 11309
+WARNING 2025-09-02 00:32:20,552 log 9512 9360 Not Found: /favicon.ico
+INFO 2025-09-02 00:32:20,553 basehttp 9512 9360 - Broken pipe from ('127.0.0.1', 42142)
+INFO 2025-09-02 00:35:33,381 autoreload 9512 10200 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:35:34,140 autoreload 20784 12080 Watching for file changes with StatReloader
+INFO 2025-09-02 00:35:36,602 autoreload 20784 12080 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:35:37,292 autoreload 5516 11556 Watching for file changes with StatReloader
+INFO 2025-09-02 00:35:39,819 autoreload 5516 11556 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:35:40,555 autoreload 11400 20008 Watching for file changes with StatReloader
+INFO 2025-09-02 00:36:42,539 autoreload 11400 20008 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:36:43,324 autoreload 20916 14632 Watching for file changes with StatReloader
+INFO 2025-09-02 00:36:52,960 basehttp 20916 3328 "GET /auth/ HTTP/1.1" 200 10968
+WARNING 2025-09-02 00:36:53,698 log 20916 3328 Not Found: /favicon.ico
+WARNING 2025-09-02 00:36:53,700 basehttp 20916 3328 "GET /favicon.ico HTTP/1.1" 404 2531
+INFO 2025-09-02 00:36:55,636 basehttp 20916 3328 "GET /auth/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:36:55,665 basehttp 20916 3328 "GET /auth/login/ HTTP/1.1" 200 5626
+WARNING 2025-09-02 00:36:55,740 log 20916 3328 Not Found: /favicon.ico
+INFO 2025-09-02 00:36:55,744 basehttp 20916 3328 - Broken pipe from ('127.0.0.1', 46215)
+INFO 2025-09-02 00:37:03,807 utils 20916 8820 SMS OTP sent to +9021200359: 825457
+INFO 2025-09-02 00:37:03,829 basehttp 20916 8820 "POST /auth/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:37:03,868 utils 20916 8820 Cleaned up 2 expired OTPs
+INFO 2025-09-02 00:37:03,892 basehttp 20916 8820 "GET /auth/otp-verification/ HTTP/1.1" 200 9067
+INFO 2025-09-02 00:37:12,060 basehttp 20916 8820 "POST /auth/otp-verification/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:37:12,100 basehttp 20916 8820 "GET /auth/profile-completion/ HTTP/1.1" 200 10642
+INFO 2025-09-02 00:38:02,138 basehttp 20916 8820 "POST /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:38:02,193 basehttp 20916 8820 "GET /auth/ HTTP/1.1" 200 10901
+WARNING 2025-09-02 00:38:02,317 log 20916 8820 Not Found: /favicon.ico
+INFO 2025-09-02 00:38:02,318 basehttp 20916 8820 - Broken pipe from ('127.0.0.1', 46362)
+INFO 2025-09-02 00:38:57,490 basehttp 20916 19524 "GET /auth/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:38:57,503 basehttp 20916 19524 "GET /auth/login/ HTTP/1.1" 200 5626
+WARNING 2025-09-02 00:38:57,590 log 20916 19524 Not Found: /favicon.ico
+INFO 2025-09-02 00:38:57,592 basehttp 20916 19524 - Broken pipe from ('127.0.0.1', 47940)
+INFO 2025-09-02 00:39:04,112 utils 20916 12836 SMS OTP sent to +9021200359: 618979
+INFO 2025-09-02 00:39:04,130 basehttp 20916 12836 "POST /auth/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:39:04,162 basehttp 20916 12836 "GET /auth/otp-verification/ HTTP/1.1" 200 9067
+INFO 2025-09-02 00:39:13,709 basehttp 20916 12836 "POST /auth/otp-verification/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:39:13,727 basehttp 20916 12836 "GET /auth/ HTTP/1.1" 200 10873
+INFO 2025-09-02 00:40:14,751 basehttp 20916 12836 "GET /auth/profile/ HTTP/1.1" 200 13603
+WARNING 2025-09-02 00:40:14,825 log 20916 1800 Not Found: /favicon.ico
+INFO 2025-09-02 00:40:14,827 basehttp 20916 1800 - Broken pipe from ('127.0.0.1', 49016)
+ERROR 2025-09-02 00:52:37,457 log 20916 17096 Internal Server Error: /auth/profile/
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 322, in profile_view
+    return redirect('profile')
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'profile' not found. 'profile' is not a valid view function or pattern name.
+ERROR 2025-09-02 00:52:37,468 basehttp 20916 17096 "POST /auth/profile/ HTTP/1.1" 500 98076
+INFO 2025-09-02 00:53:52,438 autoreload 20916 14632 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:53:53,227 autoreload 16108 13280 Watching for file changes with StatReloader
+INFO 2025-09-02 00:53:54,670 autoreload 16108 13280 D:\demo\auth_project\authapp\views.py changed, reloading.
+INFO 2025-09-02 00:53:55,305 autoreload 19260 19880 Watching for file changes with StatReloader
+INFO 2025-09-02 00:54:00,223 basehttp 19260 17424 "POST /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:54:00,259 basehttp 19260 17424 "GET /auth/profile/ HTTP/1.1" 200 14251
+INFO 2025-09-02 00:54:09,516 basehttp 19260 17424 "POST /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:54:09,550 basehttp 19260 17424 "GET /auth/profile/ HTTP/1.1" 200 13935
+INFO 2025-09-02 00:55:44,675 basehttp 19260 17424 "GET /auth/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 00:55:44,689 basehttp 19260 17424 "GET /auth/login/ HTTP/1.1" 200 5626
+INFO 2025-09-02 00:58:38,934 basehttp 19260 20004 "GET /auth/login/ HTTP/1.1" 200 5285
+INFO 2025-09-02 00:59:37,378 basehttp 19260 20004 "GET /auth/login/ HTTP/1.1" 200 5285
+INFO 2025-09-02 01:02:17,796 basehttp 19260 3156 "GET /auth/login/ HTTP/1.1" 200 5285
+INFO 2025-09-02 01:02:41,016 basehttp 19260 3156 "GET /auth/login/ HTTP/1.1" 200 5285
+INFO 2025-09-02 01:03:04,187 basehttp 19260 3156 "GET /auth/login/ HTTP/1.1" 200 5285
+INFO 2025-09-02 01:03:16,216 basehttp 19260 3156 "GET /auth/login/ HTTP/1.1" 200 5285
+ERROR 2025-09-02 01:04:09,983 log 19260 3156 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\auth_project\authapp\views.py", line 39, in login_view
+    user = User.objects.get(mobile=identifier)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+authapp.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 65, in login_view
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\models.py", line 24, in create_user
+    user.set_password(password or self.make_random_password())
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UserManager' object has no attribute 'make_random_password'
+ERROR 2025-09-02 01:04:09,999 basehttp 19260 3156 "POST /auth/login/ HTTP/1.1" 500 90746
+INFO 2025-09-02 01:04:21,193 basehttp 19260 3156 "GET /auth/login/ HTTP/1.1" 200 5285
+INFO 2025-09-02 01:04:26,764 basehttp 19260 18172 "GET /auth/login/ HTTP/1.1" 200 5285
+WARNING 2025-09-02 01:04:27,292 log 19260 18172 Not Found: /favicon.ico
+WARNING 2025-09-02 01:04:27,293 basehttp 19260 18172 "GET /favicon.ico HTTP/1.1" 404 2531
+ERROR 2025-09-02 01:04:40,514 log 19260 18172 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\auth_project\authapp\views.py", line 39, in login_view
+    user = User.objects.get(mobile=identifier)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+authapp.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 65, in login_view
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\models.py", line 24, in create_user
+    user.set_password(password or self.make_random_password())
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UserManager' object has no attribute 'make_random_password'
+ERROR 2025-09-02 01:04:40,523 basehttp 19260 18172 "POST /auth/login/ HTTP/1.1" 500 90746
+INFO 2025-09-02 01:04:58,773 basehttp 19260 18172 "GET /auth/login/ HTTP/1.1" 200 5285
+ERROR 2025-09-02 01:05:08,892 log 19260 18172 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\auth_project\authapp\views.py", line 39, in login_view
+    user = User.objects.get(mobile=identifier)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+authapp.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 65, in login_view
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\models.py", line 24, in create_user
+    user.set_password(password or self.make_random_password())
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UserManager' object has no attribute 'make_random_password'
+ERROR 2025-09-02 01:05:08,902 basehttp 19260 18172 "POST /auth/login/ HTTP/1.1" 500 90764
+INFO 2025-09-02 01:05:28,274 basehttp 19260 18172 "GET /auth/login/ HTTP/1.1" 200 5285
+INFO 2025-09-02 01:05:37,370 utils 19260 18172 SMS OTP sent to +9021200359: 203534
+INFO 2025-09-02 01:05:37,389 basehttp 19260 18172 "POST /auth/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 01:05:37,422 utils 19260 18172 Cleaned up 3 expired OTPs
+INFO 2025-09-02 01:05:37,443 basehttp 19260 18172 "GET /auth/otp-verification/ HTTP/1.1" 200 9067
+INFO 2025-09-02 01:05:54,348 basehttp 19260 18172 "POST /auth/otp-verification/ HTTP/1.1" 302 0
+INFO 2025-09-02 01:05:54,376 basehttp 19260 18172 "GET /auth/ HTTP/1.1" 200 10873
+INFO 2025-09-02 01:06:31,365 basehttp 19260 18172 "GET /auth/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 01:06:31,379 basehttp 19260 18172 "GET /auth/login/ HTTP/1.1" 200 5626
+ERROR 2025-09-02 01:07:04,591 log 19260 18172 Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "D:\demo\auth_project\authapp\views.py", line 39, in login_view
+    user = User.objects.get(mobile=identifier)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+authapp.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\views.py", line 65, in login_view
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\auth_project\authapp\models.py", line 24, in create_user
+    user.set_password(password or self.make_random_password())
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UserManager' object has no attribute 'make_random_password'
+ERROR 2025-09-02 01:07:04,604 basehttp 19260 18172 "POST /auth/login/ HTTP/1.1" 500 90746
+INFO 2025-09-02 01:10:25,694 autoreload 19260 19880 D:\demo\auth_project\authapp\models.py changed, reloading.
+INFO 2025-09-02 01:10:26,465 autoreload 19736 19800 Watching for file changes with StatReloader
+INFO 2025-09-02 01:10:27,930 autoreload 19736 19800 D:\demo\auth_project\authapp\models.py changed, reloading.
+INFO 2025-09-02 01:10:28,606 autoreload 6660 12388 Watching for file changes with StatReloader
+INFO 2025-09-02 01:10:52,387 autoreload 6660 12388 D:\demo\auth_project\authapp\models.py changed, reloading.
+INFO 2025-09-02 01:10:53,038 autoreload 18828 20740 Watching for file changes with StatReloader
+INFO 2025-09-02 01:10:57,431 autoreload 18828 20740 D:\demo\auth_project\authapp\models.py changed, reloading.
+INFO 2025-09-02 01:10:58,037 autoreload 10200 18772 Watching for file changes with StatReloader
+WARNING 2025-09-02 01:11:38,123 log 10200 7008 Not Found: /
+WARNING 2025-09-02 01:11:38,124 basehttp 10200 7008 "GET / HTTP/1.1" 404 2480
+INFO 2025-09-02 01:11:46,428 basehttp 10200 7008 "GET /auth/ HTTP/1.1" 302 0
+INFO 2025-09-02 01:11:46,463 basehttp 10200 7008 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5285
+INFO 2025-09-02 01:11:56,703 utils 10200 7008 SMS OTP sent to +6452853158: 686187
+INFO 2025-09-02 01:11:56,717 basehttp 10200 7008 "POST /auth/login/?next=/auth/ HTTP/1.1" 302 0
+INFO 2025-09-02 01:11:56,743 basehttp 10200 7008 "GET /auth/otp-verification/ HTTP/1.1" 200 9067
+INFO 2025-09-02 01:12:01,644 basehttp 10200 7008 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5285
+INFO 2025-09-02 01:12:13,990 utils 10200 7008 SMS OTP sent to +7387442129: 932358
+INFO 2025-09-02 01:12:14,002 basehttp 10200 7008 "POST /auth/login/?next=/auth/ HTTP/1.1" 302 0
+INFO 2025-09-02 01:12:14,033 basehttp 10200 7008 "GET /auth/otp-verification/ HTTP/1.1" 200 9067
+INFO 2025-09-02 01:12:43,652 basehttp 10200 7008 "POST /auth/otp-verification/ HTTP/1.1" 302 0
+INFO 2025-09-02 01:12:43,700 basehttp 10200 7008 "GET /auth/profile-completion/ HTTP/1.1" 200 10642
+INFO 2025-09-02 01:14:25,815 basehttp 10200 7008 "POST /auth/profile-completion/ HTTP/1.1" 302 0
+INFO 2025-09-02 01:14:25,848 basehttp 10200 7008 "GET /auth/ HTTP/1.1" 200 10903
+INFO 2025-09-02 01:14:43,185 basehttp 10200 7008 "GET /auth/profile/ HTTP/1.1" 200 13586
+INFO 2025-09-02 01:14:59,888 basehttp 10200 7008 "POST /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 01:14:59,924 basehttp 10200 7008 "GET /auth/profile/ HTTP/1.1" 200 13924
+INFO 2025-09-02 01:15:05,560 basehttp 10200 7008 "GET /auth/profile/ HTTP/1.1" 200 13592
+INFO 2025-09-02 01:15:06,580 basehttp 10200 7008 "GET /auth/ HTTP/1.1" 200 10552
+INFO 2025-09-02 01:15:07,431 basehttp 10200 7008 "GET /auth/profile/ HTTP/1.1" 200 13592
+INFO 2025-09-02 01:15:13,399 basehttp 10200 7008 "POST /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 01:15:13,425 basehttp 10200 7008 "GET /auth/profile/ HTTP/1.1" 200 13924
+INFO 2025-09-02 01:15:27,392 basehttp 10200 7008 "POST /auth/profile/ HTTP/1.1" 302 0
+INFO 2025-09-02 01:15:27,424 basehttp 10200 7008 "GET /auth/profile/ HTTP/1.1" 200 13926
+INFO 2025-09-02 01:15:30,255 basehttp 10200 7008 "GET /auth/ HTTP/1.1" 200 10552
+INFO 2025-09-02 01:15:39,602 basehttp 10200 7008 "GET /auth/profile/ HTTP/1.1" 200 13594
+INFO 2025-09-02 01:15:47,465 basehttp 10200 7008 "GET /auth/ HTTP/1.1" 200 10552
+WARNING 2025-09-02 01:15:47,562 log 10200 7008 Not Found: /favicon.ico
+INFO 2025-09-02 01:15:47,566 basehttp 10200 7008 - Broken pipe from ('127.0.0.1', 10870)
+INFO 2025-09-02 11:37:33,834 autoreload 8768 14664 Watching for file changes with StatReloader
+WARNING 2025-09-02 11:37:36,777 log 8768 18236 Not Found: /
+WARNING 2025-09-02 11:37:36,779 basehttp 8768 18236 "GET / HTTP/1.1" 404 2480
+WARNING 2025-09-02 11:37:37,048 log 8768 18236 Not Found: /favicon.ico
+INFO 2025-09-02 11:37:37,049 basehttp 8768 18236 - Broken pipe from ('127.0.0.1', 35701)
+INFO 2025-09-02 11:37:47,741 basehttp 8768 2196 "GET /auth/ HTTP/1.1" 302 0
+INFO 2025-09-02 11:37:47,789 basehttp 8768 2196 "GET /auth/login/?next=/auth/ HTTP/1.1" 200 5285

@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+
+{% block title %}OTP Verification - E-commerce{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+        <div class="auth-container p-5">
+            <div class="text-center mb-4">
+                <i class="fas fa-lock fa-3x text-primary mb-3"></i>
+                <h2 class="fw-bold text-dark">Verify OTP</h2>
+                <p class="text-muted">
+                    We've sent a 6-digit code to<br>
+                    <strong class="text-primary">{{ identifier }}</strong>
+                </p>{% if dev_otp %}
+<div class="alert alert-info text-center">
+    <strong>DEV OTP:</strong> {{ dev_otp }}
+</div>
+{% endif %}
+
+                <p class="text-muted small">
+                    <i class="fas fa-clock me-1"></i>
+                    OTP expires in 10 minutes
+                </p>
+            </div>
+            
+            <form method="post" novalidate>
+                {% csrf_token %}
+                
+                <div class="mb-4">
+                    <label for="{{ form.otp_code.id_for_label }}" class="form-label fw-semibold">
+                        <i class="fas fa-key me-2"></i>Enter OTP Code
+                    </label>
+                    {{ form.otp_code }}
+                    {% if form.otp_code.errors %}
+                        <div class="invalid-feedback d-block">
+                            {% for error in form.otp_code.errors %}
+                                <i class="fas fa-exclamation-circle me-1"></i>{{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-check me-2"></i>Verify & Login
+                    </button>
+                </div>
+                
+                <div class="text-center">
+                    <button type="button" class="btn btn-link text-decoration-none" id="resendBtn">
+                        <i class="fas fa-redo me-1"></i>Resend OTP
+                    </button>
+                </div>
+            </form>
+            
+            <div class="text-center mt-4">
+                <a href="{% url 'authapp:login' %}" class="btn btn-outline-secondary btn-sm">
+                    <i class="fas fa-arrow-left me-1"></i>Back to Login
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const otpInput = document.getElementById('{{ form.otp_code.id_for_label }}');
+    const resendBtn = document.getElementById('resendBtn');
+    let canResend = true;
+    let resendTimer = 60;
+    
+    // Auto-focus OTP input
+    otpInput.focus();
+    
+    // Auto-format OTP input
+    otpInput.addEventListener('input', function(e) {
+        let value = e.target.value;
+        
+        // Remove non-digits
+        value = value.replace(/\D/g, '');
+        
+        // Limit to 6 digits
+        if (value.length > 6) {
+            value = value.slice(0, 6);
+        }
+        
+        e.target.value = value;
+        
+        // Auto-submit when 6 digits are entered
+        if (value.length === 6) {
+            e.target.form.submit();
+        }
+    });
+    
+    // Handle resend OTP
+    resendBtn.addEventListener('click', function() {
+        if (!canResend) return;
+        
+        canResend = false;
+        resendBtn.disabled = true;
+        
+        // Send resend request
+        fetch('{% url "authapp:resend_otp" %}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+            },
+            body: JSON.stringify({
+                identifier: '{{ identifier }}'
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                // Show success message
+                const alert = document.createElement('div');
+                alert.className = 'alert alert-success alert-dismissible fade show';
+                alert.innerHTML = `
+                    <i class="fas fa-check-circle me-2"></i>${data.message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+                document.querySelector('.container').insertBefore(alert, document.querySelector('.container').firstChild);
+                
+                // Start countdown
+                startResendCountdown();
+            } else {
+                throw new Error(data.error || 'Failed to resend OTP');
+            }
+        })
+        .catch(error => {
+            // Show error message
+            const alert = document.createElement('div');
+            alert.className = 'alert alert-danger alert-dismissible fade show';
+            alert.innerHTML = `
+                <i class="fas fa-exclamation-circle me-2"></i>${error.message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            document.querySelector('.container').insertBefore(alert, document.querySelector('.container').firstChild);
+            
+            // Re-enable resend button
+            canResend = true;
+            resendBtn.disabled = false;
+            resendBtn.innerHTML = '<i class="fas fa-redo me-1"></i>Resend OTP';
+        });
+    });
+    
+    function startResendCountdown() {
+        const interval = setInterval(() => {
+            resendBtn.innerHTML = `<i class="fas fa-clock me-1"></i>Resend in ${resendTimer}s`;
+            resendTimer--;
+            
+            if (resendTimer < 0) {
+                clearInterval(interval);
+                canResend = true;
+                resendBtn.disabled = false;
+                resendBtn.innerHTML = '<i class="fas fa-redo me-1"></i>Resend OTP';
+                resendTimer = 60;
+            }
+        }, 1000);
+    }
+    
+    // Start initial countdown
+    startResendCountdown();
+});
+</script>
+{% endblock %}
+
